@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#logo{
+    width: 10%;
+    height: 10%;
+    display: inline;
+}
+
+.cards{
+    display: inline-block;
+    border: 1px solid black;
+}
+
+#ul{
+    list-style: none;
+}
+
+.nav-link{
+    display: inline-block;
+}

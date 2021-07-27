@@ -1,0 +1,18 @@
+#form-container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 1rem;
+}
+
+.form-content{
+    width: 25%;
+    margin: 0.5rem 0;
+}
+
+#submit{
+    margin: 2rem 0 0 0;
+    width: 25%;
+}
