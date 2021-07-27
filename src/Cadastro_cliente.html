@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se | Cliente</title>
-    
+    <link rel="stylesheet" href="public/css/cadastro_cliente.css">
 </head>
 <body>
 
-    <form action="#">
+    <form action="#" id="form-container">
         <legend>Seu cadastro</legend>
 
-        <label for="name">Seu nome:</label>
-        <input type="text" name="name">
+        <label for="name" class="form-content">Seu nome:</label>
+        <input type="text" name="name" class="form-content">
 
-        <label for="username">Seu nome de usuário:</label>
-        <input type="text" name="username" placeholder="Para ficar no seu perfil...">
+        <label for="username" class="form-content">Seu nome de usuário:</label>
+        <input type="text" name="username" class="form-content">
 
-        <label>Email:</label>
-        <input type="email">
+        <label class="form-content">Email:</label>
+        <input type="email" class="form-content">
 
-        <label>Senha:</label>
-        <input type="password">
+        <label class="form-content">Senha:</label>
+        <input type="password" class="form-content">
 
-        <label>Confirme sua senha:</label>
-        <input type="password">
+        <label class="form-content">Confirme sua senha:</label>
+        <input type="password" class="form-content">
 
 
 
@@ -44,7 +44,7 @@
             <button>Adicionar outro</button>
         </div>
 
-        <button type="submit">Cadastrar-se</button>   
+        <button type="submit" id="submit">Cadastrar-se</button>   
     </form>
     
 </body>

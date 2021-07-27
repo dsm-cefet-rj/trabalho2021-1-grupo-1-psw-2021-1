@@ -5,29 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova tatuagem</title>
-    
+    <link rel="stylesheet" href="public/css/cadastro_tatuagem.css">
 </head>
 <body>
     
-    <form action="#" method="POST">
+    <form action="#" method="POST" id="form-container">
         <legend>Nova tatuagem</legend>
         
-        <label for="image">Imagem da arte:</label>
-        <div>
+        <label for="image" class="form-content">Imagem da arte:</label>
+        <div class="form-content">
             <img src="#" alt="Imagem da arte da nova tatuagem">
             <input type="file">
         </div>
 
 
-        <label for="description">Descrição:</label>
-        <textarea name="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>
+        <label for="description" class="form-content">Descrição:</label>
+        <textarea name="description" class="form-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>
 
 
-        <label for="price">Preço do serviço:</label>
-        <input type="number">
+        <label class="form-content">Tags</label>
+        <div>
+            <label>Tribais</label>
+            <input type="checkbox">
+            <label>New school</label>
+            <input type="checkbox">
+            <label>Minimalista</label>
+            <input type="checkbox">
+            <label>Formas geométricas</label>
+            <input type="checkbox">
+            <label>Old school</label>
+            <input type="checkbox">
+            <button>Adicionar outro</button>
+        </div>
+
+
+        <label for="price" class="form-content">Preço do serviço:</label>
+        <input type="number" class="form-content">
+        
         
 
-        <button type="submit">Adicionar</button>
+        <button type="submit" class="form-content">Adicionar</button>
     </form>
     
 </body>

@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubra seu gosto</title>
+    <link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
-    <section>
-        <h1>Catálogo de artes</h1>
+    <header>
+        <img src="public/images/Logo PSW sem texto.png" alt="Logotipo do Tatuando" id="logo">
+        <h1>Tatuando</h1>
+    </header>
 
+    <section>
         <div>
             <input type="search" placeholder="Encontre o que procura">
             <button>Procurar</button>
@@ -24,35 +28,35 @@
 
         <hr>
 
-        <article style="border: 1px solid black; display: inline-block">
+        <article class="cards">
             <img src="#" alt="Imagem da tatuagem"> 
             <h6>Nome da tatuagem e descrição</h6>
             <a href="Perfil_tatuador.html"><p>Username do tatuador</p></a>
             <p>R$ 100,00</p>
             <button>Salvar</button>
         </article>
-        <article style="border: 1px solid black; display: inline-block">
+        <article class="cards">
             <img src="#" alt="Imagem da tatuagem"> 
             <h6>Nome da tatuagem e descrição</h6>
             <a href="Perfil_tatuador.html"><p>Username do tatuador</p></a>
             <p>R$ 100,00</p>
             <button>Salvar</button>
         </article>
-        <article style="border: 1px solid black; display: inline-block">
+        <article class="cards">
             <img src="#" alt="Imagem da tatuagem"> 
             <h6>Nome da tatuagem e descrição</h6>
             <a href="Perfil_tatuador.html"><p>Username do tatuador</p></a>
             <p>R$ 100,00</p>
             <button>Salvar</button>
         </article>
-        <article style="border: 1px solid black; display: inline-block">
+        <article class="cards">
             <img src="#" alt="Imagem da tatuagem"> 
             <h6>Nome da tatuagem e descrição</h6>
             <a href="Perfil_tatuador.html"><p>Username do tatuador</p></a>
             <p>R$ 100,00</p>
             <button>Salvar</button>
         </article>
-        <article style="border: 1px solid black; display: inline-block">
+        <article class="cards">
             <img src="#" alt="Imagem da tatuagem"> 
             <h6>Nome da tatuagem e descrição</h6>
             <a href="Perfil_tatuador.html"><p>Username do tatuador</p></a>
@@ -62,9 +66,9 @@
     </section>
 
     <nav>
-        <ul>
-            <a href="#"><li>Meu perfil</li></a>
-            <a href="#"><li>Configurações</li></a>
+        <ul id="ul">
+            <a href="#" class="nav-link"><li>Meu perfil</li></a>
+            <a href="#" class="nav-link"><li>Configurações</li></a>
         </ul>
     </nav>
 
