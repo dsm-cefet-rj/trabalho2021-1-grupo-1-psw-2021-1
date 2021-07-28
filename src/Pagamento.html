@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagamento</title>
+    </head>
+    <body>
+        <h1>Dados pessoais de pagamento</h1>
+        <form>
+            <h3>Titular</h3>
+            <div>
+                <p>Nome igual aparece impresso no cartão</p>
+                <input alt="Digite aqui o nome igual aparece impresso no cartão">
+                <p>CPF/CNPJ do dono do cartão</p>
+                <input alt="Digite aqui o CPF ou CNPJ do dono do cartão">
+            </div>
+            <h3>Número</h3>
+            <div>
+                <input alt="Digite aqui o número do cartão">
+            </div>
+            <h3>Validade</h3>
+            <div>
+                <input alt="Escolha a data contento o més e ano de expiração do cartão" type="date">
+                <p>Cod. CVV</p>
+                <input alt="Digite aqui o código de segurança do cartão"type="text">
+            </div>
+            <h3>Parcela</h3>
+            <div>
+                <input disabled="" placeholder="R$ 500,00" alt="O valor a ser pago é de R$ 500">
+                <select alt="Selecione aqui o número de parcelas">
+                    <option alt="Uma parcela de R$ 500,00"> 1 parcela de R$ 500,00 (R$ 500,00)</option>
+                    <option atl="Duas parcelas de R$ 250,00"> 2 parcelas de R$ 250,00 (R$ 500,00)</option>
+                    <option atl="Três parcelas de R$ 166,33"> 2 parcelas de R$ 166,33 (R$ 500,00)</option>
+                    <option alt="Quatro parcelas de R$ 125,00"> 4 parcelas de R$ 125,00 (R$ 50,00)</option>
+                </select>
+            </div>
+            <br>
+            <button type="submit" alt="Processar pagamento e encerrar compra">Prosseguir</button>
+        </form>
+    </body>
+</html>
