@@ -4,7 +4,7 @@
 
 #### 1. Nome do sistema e declaração de propósito.
 
-Tatuando é uma plataforma de marketplace para tatuagens. Sua proposta é que tatuadores consigam promover seus negócios e que os usuários encontrem o melhor preço e qualidade para a futura tutuagem.
+Tatuando é uma plataforma de marketplace para tatuagens. Sua proposta é que tatuadores consigam promover seus negócios e que os usuários encontrem o melhor preço e qualidade para a futura tatuagem.
 
 ***
 
@@ -13,7 +13,7 @@ Por diversos motivos, pessoas tendem a fazer tatuagem, seja por gostar de uma ar
 
 ***
 
-#### 3. Processo de Negócio Princial: 
+#### 3. Processo de Negócio Principal: 
 Processo de Negócio Principal: Inicialmente, o cliente e o tatuador criam um perfil. Para vendas, o tatuador cadastra os desenhos, juntamente com os dados como; Tamanho, preço, imagem, tipo de tinta, tempo para produzir, tag do nome da arte, entre outros. Os dados e as imagens cadastradas pelo tatuador podem ser visualizadas no perfil do tatuador e na vitrine de tatuagens gerais.  
 Do fluxo do cliente, a tela inicial, ao ingressar na plataforma, é a vitrine, nela o cliente pode pesquisar por um desenho através das tags,tipo de tinta, tamanho e afins. Ao selecionar uma arte, ele é redirecionado para o perfil do tatuador, onde poderá visualizar as notas que o mesmo recebeu e os demais desenhos, clicando em um desenho, vai para a página do produto, onde pode verificar todas as informações e efetuar o pagamento.
 
