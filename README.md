@@ -36,5 +36,10 @@ Cliente, tatuador, arte e compra.
 
 Total: 27 casos de uso
 
+**Diagrama de casos de uso:** 
+<div>
+  <img align=center src=https://github.com/dsm-cefet-rj/trabalho2021-1-grupo-1-psw-2021-1/blob/main/images/casosDeUsoTatuando.png>
+</div>
+
 ***
 
