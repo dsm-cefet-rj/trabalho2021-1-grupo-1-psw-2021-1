@@ -1,166 +1,200 @@
-@media screen and (max-width: 600px) {
+body{
+    background-color: #242424;
+    font-family: 'Roboto', 'sans-serif';
+}
 
-    body{
-        background-color: #242424;
-        font-family: 'Roboto', 'sans-serif';
-    }
+#header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
 
-    #header-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-    }
+#info-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-    #info-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+#info-container p{
+    display: inline-block;
+    width: 90%;
+    margin-top: 1.5em;
+    color: #929292;
+}
 
-    #info-container p{
-        display: inline-block;
-        width: 90%;
-        margin-top: 1.5em;
-        color: #929292;
-    }
+#img-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #929292;
+}
 
-    #img-container{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 2px solid #929292;
-    }
+#img-container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 
-    #img-container img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
+#username{
+    align-self: flex-end;
+    color: #929292;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
 
-    #username{
-        align-self: flex-end;
-        color: #929292;
-        margin-bottom: 0.5em;
-        font-weight: bold;
-    }
+#settings{
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    align-self: flex-end;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
-    #settings{
-        width: 28px;
-        height: 28px;
-        background-color: transparent;
-        border: none;
-        align-self: flex-end;
-        margin-bottom: 1em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
+#rating-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
 
-    #rating-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+#rating-container h3{ 
+    color: #929292;
+    font-size: 1.2em;
+    font-weight: bold;               
+}
 
-    #rating-container tr{
-        display: block;
-        width: 100%;
-        
-    }
+#rating-container p{ 
+    color: #929292;
+    font-size: 1.2em;
+}
 
-    #rating-container tr td {
-        width: 33%;
-        text-align: center;
-    }
+#post-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 2px solid #929292;
+    padding-top: 0.5em;
+    grid-column: 1/-1;
+}
 
-    #post-options{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border-top: 2px solid #929292;
-        padding-top: 0.5em;
-        grid-column: 1/-1;
-    }
+#post-options button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: #929292;
+    font-size: 1.0em;
+    background-color: transparent;
+    justify-self: center;
+    transition: all 0.5s;
+}
 
-    #post-options button{
-        width: 100%;
-        height: 40px;
-        border: none;
-        color: #929292;
-        font-size: 1.0em;
-        background-color: transparent;
-        justify-self: center;
-        transition: all 0.5s;
-    }
+
+#post-options button:hover{
+    transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+#cards-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 70px;
+    overflow: scroll;
+}
+
+.article-cards{
+    border: 2px solid #929292;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.article-cards img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.article-cards p, .article-cards h4{
+    color: #929292;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.article-cards p{
+    text-align: left;
+    display: inline-block;
     
-    
-    #post-options button:hover{
-        transition: all 0.5s;
-        background-color: rgba(255, 255, 255, 0.10);
-    }
+}
 
-    #cards-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-        overflow: scroll;
-    }
+.article-cards button{
+    border: none;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    float: right;
+}
 
-    .article-cards{
-        border: 2px solid #929292;
-        box-sizing: border-box;
-        border-radius: 5px;
-        padding: 0.5em;
-        width: 100%;
-    }
+#nav-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242424;
+    border-top: 2px solid #929292;
+    border-radius: 10px 10px 0 0;
+}
 
-    .article-cards img{
-        max-width: 100%;
-        max-height: 100%;
-    }
+#nav-container ul{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
 
-    .article-cards p, .article-cards h4{
-        color: #929292;
-        margin-bottom: 0;
-        text-align: center;
-    }
+#nav-container ul li{
+    display: inline-block;
+}
 
-    .article-cards p{
-        text-align: left;
-        display: inline-block;
-        
-    }
-
-    .article-cards button{
-        border: none;
-        background-color: transparent;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1em;
-        float: right;
+@media screen and (min-width: 720px) {
+    #header-container, #cards-container{
+        width: 70%;
+        margin: 0 auto;
     }
 
     #nav-container{
         position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #242424;
-        
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 10%; 
+        border: none;
+        border-right: 2px solid #929292;
+        border-radius: 0 10px 10px 0;      
     }
 
     #nav-container ul{
-        padding: 0;
-        list-style-type: none;
-        display: flex;
+        margin: 0;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-around;
     }
+}
 
-    #nav-container ul li{
-        display: inline-block;
+
+@media screen and (min-width: 720px){
+
+    #header-container, #cards-container{
+        width: 50%;
+        margin: 0 auto;
     }
-
-
 }
