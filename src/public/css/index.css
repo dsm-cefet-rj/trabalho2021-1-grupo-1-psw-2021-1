@@ -4,11 +4,11 @@
     box-sizing: border-box;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    color: #929292;
+    color: #0D0D0D;
 }
 
 body {
-    background-color: #242424;
+    background-color: #f2f2f2;
 }
 
 header{
@@ -24,15 +24,39 @@ header{
     display: inline;
 }
 
+#search-container{
+    background-color: #262626;
+    opacity: 0.1;
+    margin: auto;
+    border-radius: 0.3rem;
+    width: 90%;
+}
+
 #search-container input {
     outline: none;
     border: none;
+        background-color: transparent;
+        width: 100%;
+        height: 1.7rem;
+        padding: 1.1rem;
+}
+
+::placeholder{
+    color: white;
+    /*Não tô conseguindo deixar preto ainda*/
 }
 
 .cards{
     display: inline-block;
-    border: 1px solid #929292;
+    border: 1px solid #0D0D0D;
     border-radius: 0.75rem;
+}
+
+.cards .btn-salvar{
+    background-color: black;
+    border: transparent;
+    border-radius: 0.5rem;
+    color: #f2f2f2; 
 }
 
 #ul{
@@ -43,30 +67,57 @@ header{
     display: inline-block;
 }
 
-@media screen and (max-width: 600px){
-    
-    header{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin: 0;
+@media (min-width: 600px) and (max-width: 1280px) {
+        
+    #search-container{
+        height: 5vh;
     }
     
-    #search-container{
-        margin: auto;
-        width: 90%;
-        border: solid 0.15rem #929292;
-        border-radius: 0.7rem;
+    #search-container button{
+        margin: 0;
+        width: 15%;
+        background: transparent;
+        border: transparent;
     }
 
-    #search-container input{
-        background-color: transparent;
-        width: 75%;
-        height: 1.7rem;
-        margin: 2% 2% 2% 0;
-        padding: 1rem;
-        
+
+    #profile-settings{
+        display: none;
     }
+
+    #feed-container{
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 90%;
+        margin: auto;
+    }
+    
+    .cards{
+        display: flex;
+        text-align: center;
+        margin: 3% auto;
+        display: block;
+        width: 40%;
+        height: 65vh;
+    }
+    .cards img {
+        border-radius: 0.75rem;
+        width: 100%;
+        height: 35vh;
+        overflow: hidden;
+    }
+
+    .cards .btn-salvar{
+        width: 30%;
+        height: 30px;
+        margin-bottom: 8px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
     
     #search-container button{
         margin: 0;
@@ -102,4 +153,12 @@ header{
     #ul{
         display: none;
     }
+
+    .cards .btn-salvar{
+        width: 30%;
+        height: 30px;
+        margin-bottom: 8px;
+    }
+
+    
 }
