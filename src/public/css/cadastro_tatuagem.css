@@ -1,12 +1,37 @@
+body {
+    background-color: #242424;
+    font-family: 'Roboto', 'sans-serif';
+}
+
 #form-container{
     display: flex;
     border: 1px solid black;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1rem;
+    background-color: rgb(255, 255, 255);
 }
 
+#upload-image{
+    display: flex;
+}
+
+#description{
+    display: flex;
+}
+
+#tags{
+    display: flex;
+}
+#price{
+    display: flex;
+}
+
+#end-form{
+    display: none;
+}
 .form-content{
     margin: 0.5rem;
     width: 25%;
 }
+

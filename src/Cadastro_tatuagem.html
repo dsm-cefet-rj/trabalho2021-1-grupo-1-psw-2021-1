@@ -12,39 +12,48 @@
     <form action="#" method="POST" id="form-container">
         <legend>Nova tatuagem</legend>
         
-        <label for="image" class="form-content">Imagem da arte:</label>
-        <div class="form-content">
-            <img src="#" alt="Imagem da arte da nova tatuagem">
-            <input type="file">
-        </div>
+        <section id="upload-image">
+            <label for="image" class="form-content">Imagem da arte:</label>
+            <div class="form-content">
+                <img src="#" alt="Imagem da arte da nova tatuagem">
+                <input type="file">
+            </div>
+        </section>
 
+        <section id="description">
+            <label for="description" class="form-content">Descrição:</label>
+            <textarea name="description" class="form-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>     
+        </section>
 
-        <label for="description" class="form-content">Descrição:</label>
-        <textarea name="description" class="form-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>
+        <section id="tags">
+            <label class="form-content">Tags</label>
+            <div>
+                <label>Tribais</label>
+                <input type="checkbox">
+                <label>New school</label>
+                <input type="checkbox">
+                <label>Minimalista</label>
+                <input type="checkbox">
+                <label>Formas geométricas</label>
+                <input type="checkbox">
+                <label>Old school</label>
+                <input type="checkbox">
+                <button>Adicionar outro</button>
+            </div>    
+        </section>
 
+        <section id="price">
+            <label for="price" class="form-content">Preço do serviço:</label>
+            <input type="number" class="form-content">
+        </section>        
 
-        <label class="form-content">Tags</label>
-        <div>
-            <label>Tribais</label>
-            <input type="checkbox">
-            <label>New school</label>
-            <input type="checkbox">
-            <label>Minimalista</label>
-            <input type="checkbox">
-            <label>Formas geométricas</label>
-            <input type="checkbox">
-            <label>Old school</label>
-            <input type="checkbox">
-            <button>Adicionar outro</button>
-        </div>
+        <section id="end-form">
+            <button type="submit" class="form-content">Adicionar</button>
+        </section>
 
+        <button type="back" class="form-content">Voltar</button>
+        <button type="next" class="form-content">Avançar</button>
 
-        <label for="price" class="form-content">Preço do serviço:</label>
-        <input type="number" class="form-content">
-        
-        
-
-        <button type="submit" class="form-content">Adicionar</button>
     </form>
     
 </body>
