@@ -1,5 +1,5 @@
 body{
-    background-color: #242424;
+    background-color: #f2f2f2;
     font-family: 'Roboto', 'sans-serif';
 }
 
@@ -21,14 +21,14 @@ body{
     display: inline-block;
     width: 90%;
     margin-top: 15px;
-    color: #929292;
+    color: #0D0D0D;
 }
 
 #img-container{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 2px solid #929292;
+    border: 2px solid #0D0D0D;
 }
 
 #img-container img{
@@ -39,7 +39,7 @@ body{
 
 #username{
     align-self: flex-end;
-    color: #929292;
+    color: #0D0D0D;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -65,13 +65,13 @@ body{
 }
 
 #rating-container h3{ 
-    color: #929292;
+    color: #0D0D0D;
     font-size: 18px;
     font-weight: bold;               
 }
 
 #rating-container p{ 
-    color: #929292;
+    color: #0D0D0D;
     font-size: 20px;
     font-weight: bold; 
 }
@@ -79,7 +79,7 @@ body{
 #post-options{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-top: 2px solid #929292;
+    border-top: 2px solid #0D0D0D;
     padding-top: 10px;
     grid-column: 1/-1;
 }
@@ -88,7 +88,7 @@ body{
     width: 100%;
     height: 40px;
     border: none;
-    color: #929292;
+    color: #0D0D0D;
     font-size: 16px;
     background-color: transparent;
     justify-self: center;
@@ -109,7 +109,7 @@ body{
 }
 
 .article-cards{
-    border: 2px solid #929292;
+    border: 2px solid #0D0D0D;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 5px;
@@ -130,7 +130,7 @@ body{
 }
 
 .article-cards p, .article-cards h4{
-    color: #929292;
+    color: #0D0D0D;
     margin-bottom: 0;
     text-align: center;
 }
@@ -156,8 +156,8 @@ body{
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #242424;
-    border-top: 2px solid #929292;
+    background-color: #0D0D0D;
+    border-top: 2px solid #f2f2f2;
     border-radius: 10px 10px 0 0;
 }
 
@@ -186,7 +186,7 @@ body{
         height: 100%;
         width: 10%; 
         border: none;
-        border-right: 2px solid #929292;
+        border-right: 2px solid #f2f2f2;
         border-radius: 0 10px 10px 0;      
     }
 
@@ -200,7 +200,7 @@ body{
 
 
     .article-cards{
-        border: 2px solid #929292;
+        border: 2px solid #0D0D0D;
         box-sizing: border-box;
         border-radius: 5px;
         padding: 5px;
@@ -234,7 +234,7 @@ body{
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        border: 2px solid #929292;
+        border: 2px solid #0D0D0D;
     }
     
     #img-container img{
