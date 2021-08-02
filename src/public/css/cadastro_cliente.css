@@ -1,18 +1,53 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: #0D0D0D;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+
+@media screen and (max-width: 600px){
+
+.main-container{
+    margin: 3% auto;
+    max-width: 90%;
+}
+
 #form-container{
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: space-around;
     padding: 1rem;
+    margin: auto;
+    align-items: center;
 }
 
 .form-content{
-    width: 25%;
-    margin: 0.5rem 0;
+    width: 80%;
+    margin: 0.3rem;
+}
+
+input.form-content{
+    height: 2.3rem;
+    border-radius: 0.5rem;
+    border-color: transparent  transparent black;
+    background-color: #A6A6A6;
+    opacity: 15%;
+    margin-bottom: 10%;
 }
 
 #submit{
     margin: 2rem 0 0 0;
-    width: 25%;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 0.3rem;
+    border:transparent;
+    background-color: #0D0D0D;
+    color: white;
+}
 }
