@@ -1,71 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Seu prefil de usuário</title>
-    </head>
-    <body>
-        <header>
-            <div>
-                <img src="#" alt="Imagem de perfil do cliente">
-            </div>
-            <section>
-                <h2>Username</h2>
-                <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ab modi exercitationem laboriosam nihil nobis blanditiis mollitia aspernatur corrupti minus rerum deserunt, corporis animi veniam cum fuga nesciunt maiores. Sequi.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu perfil de tatuador</title>
+    <link rel="stylesheet" href="public/css/perfil_tatuador.css">
+</head>
+<body>
+
+    <main id="container">
+        <header id="header-container">
+            <section id="info-container">
+                <div id="img-container">
+                    <img src="public/images/img-profile.jpg" alt="Imagem de perfil do tatuador">
+                </div>
+                <h2 id="username">Username</h2>
+                <button type="button" id="settings"><img id="edit-icon" src="public/images/edit.svg"></button>
+                <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
             </section>
-            <button type="button">Editar perfil</button>
-            
-            <hr>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <td>Fãs</td>
-                        <td>Seguindo</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>400</td>
-                        <td>1000</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div id="rating-container">
+                    <h3>Tatuagens</h3>
+                    <h3>Seguidores</h3>
+                    <h3>Seguindo</h3>
+                    <p>3</p>
+                    <p>127</p>
+                    <p>63</p>
+            </div>
         </header>
 
-        <hr>
+        <section id="cards-container">
 
-        <section>
-            <div>
-                <ul>
-                    <a href="#"><li>Minhas tatuagens</li></a>
-                    <a href="#"><li>Pessoas com quem já me tatuei</li></a>
-                </ul>
+            <div id="post-options">
+                <button>Minhas tattos</button>
+                <button>Tatuadores</button>
             </div>
 
-            <hr>
 
-            <article style="border: 1px solid black; display: inline-block; padding: 0.5rem">
-                <img src="#" alt="Imagem da tatuagem 1">
-                <h6>Nome da tatuagem 1 e sua descrição</h6>
-                <p> Feita pelo <a href="#">@tatuador1</a></p>
-                <button type="button">Editar</button>
+            <article class="article-cards">
+                <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 1" class="tattoo-art">
+                <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4> 
+                <p>R$ 100,00</p>
+                <button type="button"><img src="public/images/pen.svg"></button>
             </article>
-            <article style="border: 1px solid black; display: inline-block; padding: 0.5rem">
-                <img src="#" alt="Imagem da tatuagem 2">
-                <h6>Nome da tatuagem 2 e sua descrição</h6>
-                <p> Feita pelo <a href="#">@tatuador2</a></p>
-                <button type="button">Editar</button>
+            <article class="article-cards">
+                <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 2" class="tattoo-art">
+                <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4> 
+                <p>R$ 100,00</p>
+                <button type="button"><img src="public/images/pen.svg"></button>
             </article>
-            <article style="border: 1px solid black; display: inline-block; padding: 0.5rem">
-                <img src="#" alt="Imagem da tatuagem 3">
-                <h6>Nome da tatuagem 3 e sua descrição</h6>
-                <p> Feita pelo <a href="#">@tatuador3</a></p>
-                <button type="button">Editar</button>
+            <article class="article-cards">
+                <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 3" class="tattoo-art">
+                <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4> 
+                <p>R$ 100,00</p>
+                <button type="button"><img src="public/images/pen.svg"></button>
+            </article>
+            <article class="article-cards">
+                <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 3" class="tattoo-art">
+                <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4> 
+                <p>R$ 100,00</p>
+                <button type="button"><img src="public/images/pen.svg"></button>
             </article>
         </section>
 
-    </body>
+        <nav id="nav-container">
+            <ul>
+                <a href="Index.html"><img src="public/images/home.svg" style="color: white;"></a>
+                <a href="Cadastro_tatuagem.html"><img src="public/images/plus.svg"></a>
+                <a href="#"><img src="public/images/message.svg"></a>
+            </ul>
+        </nav>
+    </main>
+    
+</body>
+
 </html>
