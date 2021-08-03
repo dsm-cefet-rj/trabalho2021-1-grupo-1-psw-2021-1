@@ -10,23 +10,20 @@
 <body>
     
     <form action="#" method="POST" id="form-container">
-        <legend>Nova tatuagem</legend>
+        <div class="title">Nome Tatuagem</div>
         
-        <section id="upload-image">
-            <label for="image" class="form-content">Imagem da arte:</label>
-            <div class="form-content">
-                <img src="#" alt="Imagem da arte da nova tatuagem">
-                <input type="file">
-            </div>
-        </section>
+        <div class="input-container image">
+            <img src="#" alt="Imagem da arte da nova tatuagem">
+            <input type="file">
+        </div>
 
-        <section id="description">
+        <div class="input-container description">
             <label for="description" class="form-content">Descrição:</label>
-            <textarea name="description" class="form-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>     
-        </section>
-
-        <section id="tags">
-            <label class="form-content">Tags</label>
+            <textarea name="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>  
+        </div>
+        
+        <div class="input-container tag">
+            <label class="form-content">Tags:</label>
             <div>
                 <label>Tribais</label>
                 <input type="checkbox">
@@ -39,20 +36,15 @@
                 <label>Old school</label>
                 <input type="checkbox">
                 <button>Adicionar outro</button>
-            </div>    
-        </section>
+            </div>   
+        </div>
 
-        <section id="price">
-            <label for="price" class="form-content">Preço do serviço:</label>
+        <div class="input-container price">
+            <label for="price" class="form-content">R$</label>
             <input type="number" class="form-content">
-        </section>        
-
-        <section id="end-form">
-            <button type="submit" class="form-content">Adicionar</button>
-        </section>
-
-        <button type="back" class="form-content">Voltar</button>
-        <button type="next" class="form-content">Avançar</button>
+        </div>
+        
+        <button type="text" class="submit">submit</button>
 
     </form>
     

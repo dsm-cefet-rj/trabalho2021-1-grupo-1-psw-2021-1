@@ -1,37 +1,99 @@
 body {
-    background-color: #242424;
-    font-family: 'Roboto', 'sans-serif';
-}
-
-#form-container{
+    align-items: center;
+    background-color: #f2f2f2;
     display: flex;
-    border: 1px solid black;
-    flex-direction: column;
     justify-content: center;
-    padding: 1rem;
-    background-color: rgb(255, 255, 255);
-}
-
-#upload-image{
-    display: flex;
-}
-
-#description{
-    display: flex;
-}
-
-#tags{
-    display: flex;
-}
-#price{
-    display: flex;
-}
-
-#end-form{
-    display: none;
-}
-.form-content{
+    height: 100vh;
+  }
+  
+  .form {
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .form-content{
     margin: 0.5rem;
     width: 25%;
+    color: #0D0D0D;
+    text-align: center;
 }
 
+  .title {
+    color: #0D0D0D;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin-left: 5px;
+  }
+  
+  .image {
+    margin-top: 40px;
+    margin-left: 5px;
+  }
+  
+  .description textarea{
+      margin-top: 10px;
+      margin-left: 5px;
+      border-radius: 22px;
+      border: 1px solid #0D0D0D;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 12px;
+      height: 50px;
+      outline: 0;
+      text-align: center;
+      width: 90%;
+  }
+
+  .tag{
+      margin-top: 40px;
+      margin-left: 5px;
+  }
+  
+
+  .price{
+      margin-top: 50px;
+      text-align: center;
+      font-size: 30px;
+  }
+
+  .price input{
+    margin-left: -10px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: left;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .submit {
+    background-color: #0D0D0D;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 50px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #494747;
+  }
