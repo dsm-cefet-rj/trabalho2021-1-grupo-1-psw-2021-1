@@ -1,0 +1,104 @@
+html, body{
+    height: 100%;
+    font-family: 'Poppins';
+}
+
+#main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#main-container h1{
+    margin: 10px 0 10px;
+}
+
+#section-container{
+    padding-bottom: 1.5em;
+}
+
+#button-container{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+#button-container button{
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+#button-container button:first-child{
+    background-color: transparent;
+    border: 1px solid #2e2e2e;
+    border-radius: 5px;
+    color: #2e2e2e;
+  
+}
+
+#button-container button:last-child{
+    background-color: #90ee90;
+    border-radius: 5px;
+    color: white;
+    
+}
+
+#img-data{
+    display: none;
+}
+
+@media screen and (min-width: 720px){
+
+    #main-container{
+        width: 80%;
+    }
+
+    #section-container{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "title title"
+        "artist img"
+        "art img"
+        "total img"
+        "method .";
+    }
+    
+    #title{
+        grid-area: title;
+    }
+
+    #artist-data{
+        grid-area: artist;
+    }
+
+    #art-data{
+        grid-area: art;
+        align-self: center;
+    }
+
+    #img-data{
+        grid-area: img;
+        display: block;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #img-data img{
+        height: 250px;
+        width: 250px;
+    }
+
+    #total-data{
+        grid-area: total;
+    }
+
+    #method-data{
+        grid-area: method;
+    }
+}
