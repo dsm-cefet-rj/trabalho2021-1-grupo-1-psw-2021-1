@@ -8,45 +8,61 @@
     <link rel="stylesheet" href="public/css/cadastro_tatuagem.css">
 </head>
 <body>
+    <main>
+        <form action="#" method="POST" id="form-container">
+            <div class="title">
+                <input type="text" placeholder="Nome Tatuagem" >
+            </div>
+            
+            <div class="input-container image">
+                <img src="#" alt="Imagem da arte da nova tatuagem">
+                <input type="file">
+            </div>
     
-    <form action="#" method="POST" id="form-container">
-        <div class="title">Nome Tatuagem</div>
-        
-        <div class="input-container image">
-            <img src="#" alt="Imagem da arte da nova tatuagem">
-            <input type="file">
-        </div>
+            <div class="input-container description">
+                <label for="description" class="form-content">Descrição:</label>
+                <textarea name="description" placeholder="Descrição da tatuagem"></textarea>  
+            </div>
+            
+            <div class="input-container tag">
+                <label class="form-content">Tags:</label>
+                <div id="tag-labels">
+                    <span>
+                        <label>Tribais</label>
+                        <input type="checkbox">
+                    </span>
+                    <span>
+                        <label>Tribais</label>
+                        <input type="checkbox">
+                    </span>
+                    <span>
+                        <label>Tribais</label>
+                        <input type="checkbox">
+                    </span>
+                    <span>
+                        <label>Tribais</label>
+                        <input type="checkbox">
+                    </span>
+                    <span>
+                        <label>Tribais</label>
+                        <input type="checkbox">
+                    </span>
 
-        <div class="input-container description">
-            <label for="description" class="form-content">Descrição:</label>
-            <textarea name="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dignissimos sint temporibus, eaque assumenda rerum necessitatibus corrupti quasi, totam libero quas. Qui tempora velit blanditiis eveniet natus atque perspiciatis sint?</textarea>  
-        </div>
-        
-        <div class="input-container tag">
-            <label class="form-content">Tags:</label>
-            <div>
-                <label>Tribais</label>
-                <input type="checkbox">
-                <label>New school</label>
-                <input type="checkbox">
-                <label>Minimalista</label>
-                <input type="checkbox">
-                <label>Formas geométricas</label>
-                <input type="checkbox">
-                <label>Old school</label>
-                <input type="checkbox">
-                <button>Adicionar outro</button>
-            </div>   
-        </div>
-
-        <div class="input-container price">
-            <label for="price" class="form-content">R$</label>
-            <input type="number" class="form-content">
-        </div>
-        
-        <button type="text" class="submit">submit</button>
-
-    </form>
+                    <button>Adicionar outro</button>
+                </div>   
+            </div>
     
+            <div class="input-container price">
+                <label for="price">R$</label>
+                <input type="number">
+            </div>
+            
+            <div id="button-container">
+                <button type="text">VOLTAR</button>
+                <button type="text" class="submit">CADASTRAR</button>
+            </div>
+    
+        </form>
+    </main>    
 </body>
 </html>

@@ -1,33 +1,52 @@
 body {
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #494747;
     display: flex;
     justify-content: center;
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
   }
   
-  .form {
+  main{
+    background-color: #f2f2f2;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 500px;
+    border: 2px solid #0D0D0D ;
+    height: 100%;
     padding: 20px;
-    width: 320px;
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+
   }
   
   .form-content{
-    margin: 0.5rem;
-    width: 25%;
+    display: inline-block;
+    margin: 0.7rem 0;
     color: #0D0D0D;
     text-align: center;
 }
 
-  .title {
+  .title{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .title input {
     color: #0D0D0D;
-    font-family: sans-serif;
     font-size: 24px;
     font-weight: 600;
     margin-top: 10px;
+    background-color:transparent;
     text-align: center;
+    border: 0;
     
   }
   
@@ -43,55 +62,85 @@ body {
     margin-left: 5px;
   }
   
+  .description{
+    height: auto;
+  }
   .description textarea{
       margin-top: 10px;
-      margin-left: 5px;
-      border-radius: 22px;
+      margin-left: 5%;
+      border-radius: 5px;
       border: 1px solid #0D0D0D;
       box-sizing: border-box;
-      cursor: pointer;
       font-size: 12px;
-      height: 50px;
+      height: 60px;
       outline: 0;
-      text-align: center;
       width: 90%;
+      resize: none;
   }
 
   .tag{
-      margin-top: 40px;
-      margin-left: 5px;
+    height: auto;
+  }
+  .tag #tag-labels{
+    display: flex;
+    justify-content: space-around;
   }
   
 
   .price{
-      margin-top: 50px;
-      text-align: center;
       font-size: 30px;
+      width: 90%;
+      display: flex;
+      justify-content: center ;
+      margin-top: 1em;
+
   }
 
   .price input{
-    margin-left: -10px;
-    font-size: 30px;
+    width: 20%;
+    height: 70%;
+    font-size: 28px;
     font-weight: 600;
-    margin-top: 10px;
-    text-align: left;
     background-color: transparent;
     border: 0;
+    border-bottom: 1px solid #0D0D0D;
+    text-align: center;
+  }
+
+  #button-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #button-container button:first-child{
+    justify-self: flex-end;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid #0D0D0D;
+    box-sizing: border-box;
+    color: #0D0D0D;
+    cursor: pointer;
+    font-size: 16px;
+    justify-self: center ;
+    margin-top: 20px;
+    outline: 0;
+    text-align: center;
+    padding: 0.5em 1em;
   }
 
   .submit {
     background-color: #0D0D0D;
     border-radius: 12px;
-    border: 0;
+    border: none;
     box-sizing: border-box;
-    color: #eee;
+    color: white;
     cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    margin-top: 50px;
+    font-size: 16px;
+    justify-self: center ;
+    margin-top: 20px;
     outline: 0;
     text-align: center;
-    width: 100%;
+    padding: 0.5em 1em;
   }
   
   .submit:active {
