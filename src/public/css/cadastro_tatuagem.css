@@ -146,3 +146,8 @@ body {
   .submit:active {
     background-color: #494747;
   }
+  
+  a, u {
+    text-decoration: none;
+    color: inherit; 
+}
