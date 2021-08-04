@@ -28,11 +28,11 @@ Cliente, tatuador, arte e compra.
 * Manter tattoo (4 casos de uso - CRUD - Create, Read, Update e Delete); 
 * Manter compra (4 Casos de uso - CRUD - Create, Read, Update e Delete);
 * Agendar horário (4 Caso de uso - CRUD - Create, Read, Update e Delete); 
-* Manter follow com tatuador (3 caso de uso); 
-* Manter favorito de tatuagem (3 Caso de uso);
+* Manter follow com tatuador (4 caso de uso - CRUD - Create, Read, Update e Delete); 
+* Manter favorito de tatuagem (4 Caso de uso - CRUD - Create, Read, Update e Delete);
 * Solicitar histórico de compras (1 Caso de uso).
 
-Total: 19 casos de uso
+Total: 21 casos de uso
 
 **Diagrama de casos de uso:** 
 <div>
