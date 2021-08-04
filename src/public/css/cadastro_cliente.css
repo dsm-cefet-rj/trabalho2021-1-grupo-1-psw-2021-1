@@ -9,9 +9,6 @@ body {
     background-color: #f2f2f2;
 }
 
-
-@media screen and (max-width: 600px){
-
 .main-container{
     margin: 3% auto;
     max-width: 90%;
@@ -50,4 +47,17 @@ input.form-content{
     background-color: #0D0D0D;
     color: white;
 }
+
+@media screen and (min-width: 1200px){
+    .form-content{
+        width: 60%;
+    }
+    #form-container{
+        margin-top: 3%;
+    }
+    input.form-content{
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 1%;
+    }
 }
