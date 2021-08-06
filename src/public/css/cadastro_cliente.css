@@ -10,10 +10,13 @@ body {
 }
 
 .main-container{
-    margin: 3% auto;
+    margin: 5% auto;
     max-width: 90%;
 }
 
+legend{
+    font-size: 1.3rem;
+}
 #form-container{
     display: flex;
     flex-direction: column;
@@ -35,7 +38,7 @@ input.form-content{
     border-color: transparent  transparent black;
     background-color: #A6A6A6;
     opacity: 15%;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
 }
 
 #submit{
@@ -47,6 +50,7 @@ input.form-content{
     background-color: #0D0D0D;
     color: white;
 }
+
 
 @media screen and (min-width: 1200px){
     .form-content{
