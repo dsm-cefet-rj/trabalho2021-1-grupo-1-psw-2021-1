@@ -1,13 +1,12 @@
+import Home from "./pages/Home";
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Olá mundo
-        </p> React
-      </header>
-    </div>
-  );
+    return ( 
+        <div className ="App">
+            <Home/>
+        </div>
+        
+    );
 }
 
 export default App;
