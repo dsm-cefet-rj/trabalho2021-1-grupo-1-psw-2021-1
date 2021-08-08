@@ -1,34 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pagamento</title>
-        <link rel="stylesheet" href="./public/css/pagamento.css">
-    </head>
-    <body>
+export default function Payment() {
+    return (
         <main id="main-container">
             <h1>Forma de pagamento</h1>
             <form id="form-container">
                 <fieldset class="fieldset-container">
                     <legend class="fieldset-legend">Seus dados</legend>
                     <label>Nome do titular</label>
-                    <input alt="Digite aqui o nome igual aparece impresso no cartão" placeholder=" Nome do titular">
+                    <input alt="Digite aqui o nome igual aparece impresso no cartão" placeholder=" Nome do titular" />
                     <label>CPF/CNPJ</label>
-                    <input alt="Digite aqui o CPF ou CNPJ do dono do cartão" placeholder=" CPF/CNPJ">
+                    <input alt="Digite aqui o CPF ou CNPJ do dono do cartão" placeholder=" CPF/CNPJ" />
                 </fieldset>
                 <fieldset class="fieldset-container">
                     <legend class="fieldset-legend">Dados do cartão</legend>
                     <label>Num. do cartão</label>
-                    <input placeholder=" Número do cartão" alt="Digite aqui o número do cartão">
+                    <input placeholder=" Número do cartão" alt="Digite aqui o número do cartão" />
                     <label>Validade</label>
-                    <input placeholder=" Validade" alt="Escolha a data contendo o mês e ano de expiração do cartão">
+                    <input placeholder=" Validade" alt="Escolha a data contendo o mês e ano de expiração do cartão" />
                     <label>Código de segurança</label>
-                    <input placeholder=" CVV" alt="Digite aqui o código de segurança do cartão">
+                    <input placeholder=" CVV" alt="Digite aqui o código de segurança do cartão" />
                     <label>Parcelas</label>
                     <div>
-                        <input disabled="" placeholder=" R$ 500,00" alt="O valor a ser pago é de R$ 500">
+                        <input disabled="" placeholder=" R$ 500,00" alt="O valor a ser pago é de R$ 500" />
                         <select alt="Selecione aqui o número de parcelas">
                             <option alt="Uma parcela de R$ 500,00"> 1 parcela de R$ 500,00 (R$ 500,00)</option>
                             <option atl="Duas parcelas de R$ 250,00"> 2 parcelas de R$ 250,00 (R$ 500,00)</option>
@@ -44,5 +36,5 @@
                 </div>
             </form>
         </main>
-    </body>
-</html>
+    )
+}

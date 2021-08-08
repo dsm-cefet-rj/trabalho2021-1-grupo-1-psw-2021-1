@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,600&display=swap');
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -11,20 +10,20 @@ body {
     background-color: #f2f2f2;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-#logo{
+#logo {
     width: 100%;
     height: 10rem;
     display: inline;
 }
 
-#feed-container{
+#feed-container {
     width: 100%;
     margin-top: 1rem;
     display: flex;
@@ -34,7 +33,7 @@ header{
     justify-content: center;
 }
 
-#search-container{
+#search-container {
     background-color: #262626;
     opacity: 0.1;
     margin: auto;
@@ -45,18 +44,18 @@ header{
 #search-container input {
     outline: none;
     border: none;
-        background-color: transparent;
-        width: 100%;
-        height: 5vh;
-        padding: 1.1rem;
+    background-color: transparent;
+    width: 100%;
+    height: 5vh;
+    padding: 1.1rem;
 }
 
-::placeholder{
+::placeholder {
     color: white;
     /*Não tô conseguindo deixar preto ainda*/
 }
 
-.cards{
+.cards {
     display: inline-block;
     border: 1px solid #0D0D0D;
     border-radius: 0.75rem;
@@ -76,44 +75,39 @@ header{
     overflow: hidden;
 }
 
-.cards .btn-salvar{
+.cards .btn-salvar {
     background-color: black;
     border: transparent;
     border-radius: 0.5rem;
-    color: #f2f2f2; 
+    color: #f2f2f2;
     width: 20vh;
     height: 50px;
     font-size: 1rem;
     margin-bottom: 1%;
 }
 
-#ul{
+#ul {
     list-style: none;
 }
 
-.nav-link{
+.nav-link {
     display: inline-block;
 }
 
 @media (min-width: 600px) and (max-width: 1280px) {
-        
-    #search-container{
+    #search-container {
         height: 5vh;
     }
-    
-    #search-container button{
+    #search-container button {
         margin: 0;
         width: 15%;
         background: transparent;
         border: transparent;
     }
-
-
-    #profile-settings{
+    #profile-settings {
         display: none;
     }
-
-    #feed-container{
+    #feed-container {
         width: 100%;
         margin-top: 1rem;
         display: flex;
@@ -121,8 +115,7 @@ header{
         max-width: 90%;
         margin: auto;
     }
-    
-    .cards{
+    .cards {
         display: flex;
         text-align: center;
         margin: 3% auto;
@@ -136,34 +129,28 @@ header{
         height: 35vh;
         overflow: hidden;
     }
-
-    .cards .btn-salvar{
+    .cards .btn-salvar {
         width: 30%;
         height: 30px;
         margin-bottom: 8px;
     }
-
 }
 
-@media screen and (max-width: 600px){
-    
-    #search-container button{
+@media screen and (max-width: 600px) {
+    #search-container button {
         margin: 0;
         width: 15%;
         background: transparent;
         border: transparent;
     }
-
-    #profile-settings{
+    #profile-settings {
         display: none;
     }
-
-    #feed-container{
+    #feed-container {
         width: 100%;
         margin-top: 1rem;
     }
-    
-    .cards{
+    .cards {
         display: flex;
         text-align: center;
         margin: 3% auto;
@@ -177,16 +164,12 @@ header{
         height: 50vh;
         overflow: hidden;
     }
-
-    #ul{
+    #ul {
         display: none;
     }
-
-    .cards .btn-salvar{
+    .cards .btn-salvar {
         width: 30%;
         height: 30px;
         margin-bottom: 8px;
     }
-
-    
 }
