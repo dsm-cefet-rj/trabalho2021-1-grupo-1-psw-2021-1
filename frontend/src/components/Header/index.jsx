@@ -1,14 +1,21 @@
 import "../../styles/Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
         <header id="profile-settings">
             <ul>
                 <li>
-                    <button> Seguindo </button>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <button> Para Você </button>
+                    <Link to="/me">me</Link>
+                </li>
+                <li>
+                    <Link to="#"> Seguindo </Link>
+                </li>
+                <li>
+                    <Link to="#"> Para Você </Link>
                 </li>
             </ul>
         </header>

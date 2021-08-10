@@ -15,13 +15,19 @@
     display: inline-block;
 }
 
-#profile-settings button {
+#profile-settings a {
+    text-decoration: none;
     border: none;
-    margin: 1rem;
+    margin: 0;
+    padding: 1rem;
+    transition: linear 0.7s;
 }
 
-#profile-settings button:hover{
+#profile-settings a:hover {
     cursor: pointer;
+    border-left: 1px solid #cccc;
+    border-right: 1px solid #cccc;
+    background-color: rgba(0, 0,0, 0.1);
 }
 
 
