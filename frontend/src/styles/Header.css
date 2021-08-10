@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,600&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: #0D0D0D;
+}
+
+#profile-settings {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#profile-settings li {
+    display: inline-block;
+}
+
+#profile-settings button {
+    border: none;
+    margin: 1rem;
+}
+
+#profile-settings button:hover{
+    cursor: pointer;
+}
+
+
+

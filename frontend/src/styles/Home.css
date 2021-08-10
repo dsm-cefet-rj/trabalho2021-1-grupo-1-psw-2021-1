@@ -55,37 +55,6 @@ header {
     /*Não tô conseguindo deixar preto ainda*/
 }
 
-.cards {
-    display: inline-block;
-    border: 1px solid #0D0D0D;
-    border-radius: 0.75rem;
-    font-size: 1rem;
-    max-width: 33vh;
-    height: 65vh;
-    display: flex;
-    text-align: center;
-    display: block;
-    margin: 3% 3%;
-}
-
-.cards img {
-    border-radius: 0.75rem;
-    width: 33vh;
-    height: 35vh;
-    overflow: hidden;
-}
-
-.cards .btn-salvar {
-    background-color: black;
-    border: transparent;
-    border-radius: 0.5rem;
-    color: #f2f2f2;
-    width: 20vh;
-    height: 50px;
-    font-size: 1rem;
-    margin-bottom: 1%;
-}
-
 #ul {
     list-style: none;
 }
@@ -115,25 +84,6 @@ header {
         max-width: 90%;
         margin: auto;
     }
-    .cards {
-        display: flex;
-        text-align: center;
-        margin: 3% auto;
-        display: block;
-        width: 40%;
-        height: 65vh;
-    }
-    .cards img {
-        border-radius: 0.75rem;
-        width: 100%;
-        height: 35vh;
-        overflow: hidden;
-    }
-    .cards .btn-salvar {
-        width: 30%;
-        height: 30px;
-        margin-bottom: 8px;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -150,26 +100,7 @@ header {
         width: 100%;
         margin-top: 1rem;
     }
-    .cards {
-        display: flex;
-        text-align: center;
-        margin: 3% auto;
-        display: block;
-        width: 90%;
-        height: 80%;
-    }
-    .cards img {
-        border-radius: 0.75rem;
-        width: 100%;
-        height: 50vh;
-        overflow: hidden;
-    }
     #ul {
         display: none;
-    }
-    .cards .btn-salvar {
-        width: 30%;
-        height: 30px;
-        margin-bottom: 8px;
     }
 }
