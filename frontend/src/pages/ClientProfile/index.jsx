@@ -1,14 +1,16 @@
+import "../../styles/ClientProfile.css";
+
 export default function ClientProfile() {
     return (
         <main id="container">
             <header id="header-container">
                 <section id="info-container">
                     <div id="img-container">
-                        <img src="public/images/img-profile.jpg" alt="Imagem de perfil do tatuador" />
+                        <img src="./img-profile.jpg" alt="Imagem de perfil do tatuador" />
                     </div>
                     <h2 id="username">Username</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src="public/images/edit.svg" />
+                        <img id="edit-icon" src="./edit.svg" />
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>
@@ -30,36 +32,36 @@ export default function ClientProfile() {
                     <button>Tatuadores</button>
                 </div>
 
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 1" class="tattoo-art" />
+                <article className="article-cards">
+                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 1" className="tattoo-art" />
                     <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
                     <p>R$ 100,00</p>
                     <button type="button">
-                        <img src="public/images/pen.svg" />
+                        <img src="./pen.svg" />
                     </button>
                 </article>
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 2" class="tattoo-art" />
+                <article className="article-cards">
+                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 2" className="tattoo-art" />
                     <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
                     <p>R$ 100,00</p>
                     <button type="button">
-                        <img src="public/images/pen.svg" />
+                        <img src="./pen.svg" />
                     </button>
                 </article>
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 3" class="tattoo-art" />
+                <article className="article-cards">
+                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 3" className="tattoo-art" />
                     <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
                     <p>R$ 100,00</p>
                     <button type="button">
-                        <img src="public/images/pen.svg" />
+                        <img src="./pen.svg" />
                     </button>
                 </article>
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 3" class="tattoo-art" />
+                <article className="article-cards">
+                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 3" className="tattoo-art" />
                     <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
                     <p>R$ 100,00</p>
                     <button type="button">
-                        <img src="public/images/pen.svg" />
+                        <img src="./pen.svg" />
                     </button>
                 </article>
             </section>
@@ -67,13 +69,13 @@ export default function ClientProfile() {
             <nav id="nav-container">
                 <ul>
                     <a href="Index.html">
-                        <img src="public/images/home.svg" style="color: white;" />
+                        <img src="./home.svg" />
                     </a>
                     <a href="Cadastro_tatuagem.html">
-                        <img src="public/images/plus.svg" />
+                        <img src="./plus.svg" />
                     </a>
                     <a href="#">
-                        <img src="public/images/message.svg" />
+                        <img src="./message.svg" />
                     </a>
                 </ul>
             </nav>
