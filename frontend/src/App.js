@@ -1,11 +1,17 @@
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from "./pages/Home";
+import ClientProfile from './pages/ClientProfile';
+
 
 function App() {
     return ( 
-        <div className ="App">
-            <Home/>
-        </div>
-        
+        <Router>
+            <Switch>
+                <Route path="/">
+                    <Home/>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
