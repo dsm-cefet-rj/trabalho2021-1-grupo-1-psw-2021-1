@@ -37,6 +37,7 @@ html, body{
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 0.5em 0;
+    margin-right: 10px;
 }
 
 #button-container{

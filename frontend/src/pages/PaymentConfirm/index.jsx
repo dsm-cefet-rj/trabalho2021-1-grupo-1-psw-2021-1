@@ -1,3 +1,5 @@
+import "../../styles/PaymentConfirm.css";
+
 export default function PaymentConfirm() {
     return (
 

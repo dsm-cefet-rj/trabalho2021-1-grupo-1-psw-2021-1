@@ -1,3 +1,5 @@
+import "../../styles/SignupTattoo.css";
+
 export default function SignUpTattoo() {
     return (
         <main>

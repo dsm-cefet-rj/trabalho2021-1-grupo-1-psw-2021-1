@@ -1,3 +1,5 @@
+import "../../styles/Payment.css"
+
 export default function Payment() {
     return (
         <main id="main-container">

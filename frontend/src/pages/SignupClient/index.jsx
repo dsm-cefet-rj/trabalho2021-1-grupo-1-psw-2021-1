@@ -1,3 +1,5 @@
+import "../../styles/SignupClient.css";
+
 export default function SignUpClient() {
     return (
         <div class="main-container">

@@ -1,3 +1,6 @@
+import "../../styles/ProfessionalProfile.css"
+import Card from "../../components/Card"
+
 export default function ProfessionalProfile() {
     return (
         <main id="container">
@@ -30,39 +33,10 @@ export default function ProfessionalProfile() {
                     <button>Mais vendidas</button>
                 </div>
 
-
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 1" class="tattoo-art" />
-                    <h4>Nome da tatuagem 1 e sua descrição</h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="public/images/pen.svg" />
-                    </button>
-                </article>
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 2" class="tattoo-art" />
-                    <h4>Nome da tatuagem 2 e sua descrição</h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="public/images/pen.svg" />
-                    </button>
-                </article>
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 3" class="tattoo-art" />
-                    <h4>Nome da tatuagem 3 e sua descrição</h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="public/images/pen.svg" />
-                    </button>
-                </article>
-                <article class="article-cards">
-                    <img src="public/images/tattoo exemplo.jpg" alt="Imagem da tatuagem 3" class="tattoo-art" />
-                    <h4>Nome da tatuagem 3 e sua descrição</h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="public/images/pen.svg" />
-                    </button>
-                </article>
+                <Card image="./pen.svg" preco="R$ 100,00"/>
+                <Card image="./pen.svg" preco="R$ 100,00"/>
+                <Card image="./pen.svg" preco="R$ 100,00"/>
+                <Card image="./pen.svg" preco="R$ 100,00"/>
             </section>
 
             <nav id="nav-container">

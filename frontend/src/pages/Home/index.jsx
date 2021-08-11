@@ -25,19 +25,6 @@ export default function Home() {
                     <Card image="./exemplo6.jpg" preco="R$ 800,00" />
                 </div>
             </section>
-            <nav>
-                <ul id="ul">
-                    <a href="Perfil_cliente.html" className="nav-link">
-                        <li>Meu perfil</li>
-                    </a>
-                    <a href="Perfil_tatuador.html" className="nav-link">
-                        <li>Tatuador</li>
-                    </a>
-                    <a href="#" className="nav-link">
-                        <li>Configurações</li>
-                    </a>
-                </ul>
-            </nav>
         </>
     )
 }
