@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header'
+import Footer from './components/Footer'
 import ClientProfile from './pages/ClientProfile';
 import Home from "./pages/Home";
 import Payment from './pages/Payment';
@@ -13,7 +14,6 @@ import SignupTattoo from './pages/SignupTattoo';
 
 function App() {
     return (
-        <>
             <Router>
                 <Header />
                 <Switch>
@@ -39,8 +39,8 @@ function App() {
                         <Home />
                     </Route>
                 </Switch>
+                <Footer />
             </Router>
-        </>
     );
 }
 
