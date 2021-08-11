@@ -1,4 +1,3 @@
-import Header from "../../components/Header"
 import Card from "../../components/Card"
 
 import "../../styles/Home.css"
@@ -6,7 +5,6 @@ import "../../styles/Home.css"
 export default function Home() {
     return (
         <>
-            <Header />
             <header>
                 <a id="logo" href="Index.html">
                     <img src="./Logo PSW.svg" alt="Logotipo do Tatuando" id="logo" />

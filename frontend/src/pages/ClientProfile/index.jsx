@@ -1,3 +1,5 @@
+import Card from '../../components/Card';
+
 import "../../styles/ClientProfile.css";
 
 export default function ClientProfile() {
@@ -31,54 +33,12 @@ export default function ClientProfile() {
                     <button>Minhas tattos</button>
                     <button>Tatuadores</button>
                 </div>
-
-                <article className="article-cards">
-                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 1" className="tattoo-art" />
-                    <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="./pen.svg" />
-                    </button>
-                </article>
-                <article className="article-cards">
-                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 2" className="tattoo-art" />
-                    <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="./pen.svg" />
-                    </button>
-                </article>
-                <article className="article-cards">
-                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 3" className="tattoo-art" />
-                    <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="./pen.svg" />
-                    </button>
-                </article>
-                <article className="article-cards">
-                    <img src="./tattoo exemplo.jpg" alt="Imagem da tatuagem 3" className="tattoo-art" />
-                    <h4>Feita por <a href="Perfil_tatuador.html">@cleitin</a></h4>
-                    <p>R$ 100,00</p>
-                    <button type="button">
-                        <img src="./pen.svg" />
-                    </button>
-                </article>
+                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
+                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
+                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
+                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
             </section>
-
-            <nav id="nav-container">
-                <ul>
-                    <a href="Index.html">
-                        <img src="./home.svg" />
-                    </a>
-                    <a href="Cadastro_tatuagem.html">
-                        <img src="./plus.svg" />
-                    </a>
-                    <a href="#">
-                        <img src="./message.svg" />
-                    </a>
-                </ul>
-            </nav>
         </main>
+
     )
 }

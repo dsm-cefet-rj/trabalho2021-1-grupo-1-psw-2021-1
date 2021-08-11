@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Header from './components/Header'
 import ClientProfile from './pages/ClientProfile';
 import Home from "./pages/Home";
 import Payment from './pages/Payment';
@@ -11,32 +12,35 @@ import SignupTattoo from './pages/SignupTattoo';
 
 
 function App() {
-    return ( 
-        <Router>
-            <Switch>
-                <Route path="/me/paymentId/confirm">
-                    <PaymentConfirm/>
-                </Route>
-                <Route path="/me/paymentId">
-                    <Payment/>
-                </Route>
-                <Route path="/me/newTattoo">
-                    <SignupTattoo/>
-                </Route>
-                <Route path="/tatuadorId">
-                    <ProfessionalProfile/>
-                </Route>
-                <Route path="/signUp">  
-                    <SignupClient/>
-                </Route>
-                <Route path="/me">
-                    <ClientProfile/>
-                </Route>
-                <Route path="/">
-                    <Home/>
-                </Route>
-            </Switch>
-        </Router>
+    return (
+        <>
+            <Router>
+                <Header />
+                <Switch>
+                    <Route path="/me/paymentId/confirm">
+                        <PaymentConfirm />
+                    </Route>
+                    <Route path="/me/paymentId">
+                        <Payment />
+                    </Route>
+                    <Route path="/me/newTattoo">
+                        <SignupTattoo />
+                    </Route>
+                    <Route path="/tatuadorId">
+                        <ProfessionalProfile />
+                    </Route>
+                    <Route path="/signUp">
+                        <SignupClient />
+                    </Route>
+                    <Route path="/me">
+                        <ClientProfile />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
+            </Router>
+        </>
     );
 }
 

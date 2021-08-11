@@ -1,4 +1,4 @@
-import "../../styles/Card.css"
+import "../../styles/Card.css";
 
 export default function Card(props) {
 
@@ -8,7 +8,7 @@ export default function Card(props) {
             <div>
                 <h6>Nome da tatuagem e descrição</h6>
                 <a href="Perfil_tatuador.html">
-                    <p>Username do tatuador</p>
+                    <p>Feita por: @tatuador</p>
                 </a>
                 <p>{props.preco}</p>
                 <button className="btn-salvar">Salvar</button>
