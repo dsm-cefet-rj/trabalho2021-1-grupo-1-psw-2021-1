@@ -11,7 +11,7 @@
     display: inline-block;
     border-radius: 0.75rem;
     font-size: 1rem;
-    max-width: 33vh;
+    width: 33vh;
     height: 65vh;
     display: flex;
     text-align: center;
@@ -21,7 +21,7 @@
 
 .cards img {
     border-radius: 0.75rem;
-    width: 33vh;
+    width: 100%;
     height: 35vh;
     overflow: hidden;
 }
