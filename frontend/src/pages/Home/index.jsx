@@ -1,8 +1,33 @@
+import { useEffect } from "react"
 import Card from "../../components/Card"
 
 import "../../styles/Home.css"
 
 export default function Home() {
+
+    useEffect(() => {
+        const cards = document.querySelectorAll(".cards");
+
+        Array.from(cards);
+        cards.forEach(card => {
+            card.addEventListener("mouseenter", (e) => {
+                card.lastChild.classList.add("art-info-animation");
+                card.lastChild.childNodes[2].style.fontSize = "initial";
+                card.lastChild.childNodes[2].style.fontWeight = "initial";
+                card.lastChild.childNodes[2].style.marginTop = "0";
+                card.lastChild.childNodes[2].style.backgroundColor = "transparent";
+            })
+
+            card.addEventListener("mouseleave", (e) => {
+                card.lastChild.classList.remove("art-info-animation");
+                card.lastChild.childNodes[2].style.backgroundColor = "rgba(255, 255, 255, 0.875)";
+                card.lastChild.childNodes[2].style.fontSize = "20px";
+                card.lastChild.childNodes[2].style.fontWeight = "bold";
+                card.lastChild.childNodes[2].style.marginTop = "150px";
+            })
+        })
+    })
+
     return (
         <>
             <header>
