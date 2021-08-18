@@ -12,7 +12,7 @@ export default function ClientProfile() {
                     </div>
                     <h2 id="username">Username</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src="./edit.svg" />
+                        <img id="edit-icon" src="./edit.svg" alt="Editar pergil"/>
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>

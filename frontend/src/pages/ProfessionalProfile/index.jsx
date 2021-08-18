@@ -27,7 +27,7 @@ export default function ProfessionalProfile() {
                     </div>
                     <h2 id="username">Username</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src="./edit.svg" />
+                        <img id="edit-icon" src="./edit.svg" alt="editar" />
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>
@@ -58,13 +58,13 @@ export default function ProfessionalProfile() {
             <nav id="nav-container">
                 <ul>
                     <Link to="/">
-                        <img src="./home.svg"/>
+                        <img src="./home.svg" alt="Home"/>
                     </Link>
                     <Link to="/signUp">
-                        <img src="./plus.svg" />
+                        <img src="./plus.svg" alt="Adicionar"/>
                     </Link>
                     <Link to="#">
-                        <img src="./message.svg"/>
+                        <img src="./message.svg" alt="Mensagem"/>
                     </Link>
                 </ul>
             </nav>
