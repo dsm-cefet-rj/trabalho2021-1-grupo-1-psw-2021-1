@@ -85,12 +85,6 @@
     }
 }
 
-@media (min-width: 1395px){
-    .art-info{
-       margin-top: 11%;
-    }
-}
-
 @media screen and (max-width: 600px) {
     .cards {
         margin: 3% auto;

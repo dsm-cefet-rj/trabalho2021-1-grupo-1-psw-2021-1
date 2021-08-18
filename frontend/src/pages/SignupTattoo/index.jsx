@@ -1,4 +1,4 @@
-import "../../styles/SignupTattoo.css";
+// import "../../styles/SignupTattoo.css";
 
 export default function SignUpTattoo() {
     return (
