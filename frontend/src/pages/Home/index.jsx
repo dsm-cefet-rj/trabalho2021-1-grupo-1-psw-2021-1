@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Link } from "react-router-dom";
 import Card from "../../components/Card"
 
 import "../../styles/Home.css"
@@ -31,9 +32,9 @@ export default function Home() {
     return (
         <>
             <header>
-                <a id="logo" href="Index.html">
+                <Link id="logo" to="/">
                     <img src="./Logo PSW.svg" alt="Logotipo do Tatuando" id="logo" />
-                </a>
+                </Link>
             </header>
             <section>
                 <div id="search-container">

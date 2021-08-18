@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from "../../components/Card";
 
@@ -22,11 +23,11 @@ export default function ProfessionalProfile() {
             <header id="header-container">
                 <section id="info-container">
                     <div id="img-container">
-                        <img src="public/images/img-profile.jpg" alt="Imagem de perfil do tatuador" />
+                        <img src="./img-profile.jpg" alt="Imagem de perfil do tatuador" />
                     </div>
                     <h2 id="username">Username</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src="public/images/edit.svg" />
+                        <img id="edit-icon" src="./edit.svg" />
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>
@@ -56,15 +57,15 @@ export default function ProfessionalProfile() {
 
             <nav id="nav-container">
                 <ul>
-                    <a href="Index.html">
-                        <img src="public/images/home.svg"/>
-                    </a>
-                    <a href="Cadastro_tatuagem.html">
-                        <img src="public/images/plus.svg" />
-                    </a>
-                    <a href="#">
-                        <img src="public/images/message.svg" />
-                    </a>
+                    <Link to="/">
+                        <img src="./home.svg"/>
+                    </Link>
+                    <Link to="/signUp">
+                        <img src="./plus.svg" />
+                    </Link>
+                    <Link to="#">
+                        <img src="./message.svg"/>
+                    </Link>
                 </ul>
             </nav>
         </main>

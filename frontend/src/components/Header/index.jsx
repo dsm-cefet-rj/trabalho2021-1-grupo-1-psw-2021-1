@@ -12,7 +12,7 @@ export default function Header() {
                     <Link to="/me">me</Link>
                 </li>
                 <li>
-                    <Link to="#"> Seguindo </Link>
+                    <Link to="/tatuadorId"> Seguindo </Link>
                 </li>
                 <li>
                     <Link to="#"> Para Você </Link>
