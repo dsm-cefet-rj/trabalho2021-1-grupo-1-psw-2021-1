@@ -8,7 +8,7 @@ export default function Card(props) {
             <div className="art-info">
                 <h6>Nome da tatuagem e descrição</h6>
                 <a href="Perfil_tatuador.html">
-                    Feita por: @tatuador
+                    Feita por: {props.login}
                 </a>
                 <p>{props.preco}</p>
                 <button className="btn-salvar">Salvar</button>

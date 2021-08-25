@@ -10,8 +10,6 @@ import ProfessionalProfile from './pages/ProfessionalProfile';
 import SignupClient from './pages/SignupClient';
 import SignupTattoo from './pages/SignupTattoo';
 
-
-
 function App() {
     return (
         <Router>

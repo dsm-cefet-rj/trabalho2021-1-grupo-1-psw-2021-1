@@ -1,10 +1,14 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 import Card from "../../components/Card"
+
+import { api } from "../../services/api";
 
 import "../../styles/Home.css"
 
 export default function Home() {
+
+    let [tattoos, setTattoos] = useState({});
 
     useEffect(() => {
         const cards = document.querySelectorAll(".cards");
@@ -29,6 +33,11 @@ export default function Home() {
         })
     })
 
+    useEffect( async () => {
+        setTattoos( await api.get("/tattoos"));
+        console.log(tattoos)
+    }, {});
+
     return (
         <>
             <header>
@@ -41,7 +50,6 @@ export default function Home() {
                     <input type="search" placeholder="Encontre o que procura" />
                 </div>
                 <div id="feed-container">
-                    <Card image="./exemplo1.jpg" preco="R$ 500,00" />
                     <Card image="./exemplo2.jpg" preco="R$ 100,00" />
                     <Card image="./exemplo3.jpg" preco="R$ 350,00" />
                     <Card image="./exemplo4.jpg" preco="R$ 300,00" />
