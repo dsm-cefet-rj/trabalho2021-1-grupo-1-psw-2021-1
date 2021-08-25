@@ -49,10 +49,10 @@ export default function ProfessionalProfile() {
                     <button>Mais vendidas</button>
                 </div>
 
-                <Card image="./pen.svg" preco="R$ 100,00"/>
-                <Card image="./pen.svg" preco="R$ 100,00"/>
-                <Card image="./pen.svg" preco="R$ 100,00"/>
-                <Card image="./pen.svg" preco="R$ 100,00"/>
+                <Card image="./exemplo1.jpg" preco="R$ 100,00"/>
+                <Card image="./exemplo2.jpg" preco="R$ 100,00"/>
+                <Card image="./exemplo3.jpg" preco="R$ 100,00"/>
+                <Card image="./exemplo4.jpg" preco="R$ 100,00"/>
             </section>
 
 
