@@ -1,17 +1,23 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom'
+
 import { api } from '../../services/api';
-import axios from "axios";
 
 
 import "../../styles/EditTattoo.css";
 
 
 export default function EditTattoo() {
+    
+    let [tattoo, setTattoo] = useState();
+    const params = useParams();
 
     useEffect(async () => {
-        const params = await axios.get("http://localhost:3000/editTattoo")
-        console.log(params);
-    })
+
+        let {data} = api.get("/tatuador/2");
+        console.log(data)
+    }, [])
+
 
     return (
         <main>

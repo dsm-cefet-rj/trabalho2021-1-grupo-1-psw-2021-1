@@ -40,9 +40,10 @@ export default function Home() {
     }, []);
 
     return (
-        <>
+        <div>
             <header>
                 <Link id="logo" to="/">
+
                     <img src="./Logo PSW.svg" alt="Logotipo do Tatuando" id="logo" />
                 </Link>
             </header>
@@ -54,9 +55,8 @@ export default function Home() {
                     {
                         tattoos.map(tatuagem => <Card image={tatuagem.image} preco={tatuagem.preco} />)
                     }
-
                 </div>
             </section>
-        </>
+        </div>
     )
 }
