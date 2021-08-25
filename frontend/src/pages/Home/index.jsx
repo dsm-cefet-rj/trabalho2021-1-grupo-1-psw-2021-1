@@ -34,16 +34,14 @@ export default function Home() {
     })
 
     useEffect(async () => {
-        const { data } = await api.get("tatuador/")
-        setTattoos(data[0].tattoos);
-        console.log(data[0].tattoos)
+        const { data } = await api.get("/tattoos");
+        setTattoos(data);
     }, []);
 
     return (
         <div>
             <header>
                 <Link id="logo" to="/">
-
                     <img src="./Logo PSW.svg" alt="Logotipo do Tatuando" id="logo" />
                 </Link>
             </header>
@@ -51,9 +49,13 @@ export default function Home() {
                 <div id="search-container">
                     <input type="search" placeholder="Encontre o que procura" />
                 </div>
-                <div id="feed-container">
+                <div id="feed-container">   
                     {
-                        tattoos.map(tatuagem => <Card image={tatuagem.image} preco={tatuagem.preco} />)
+                        tattoos.map(tattoo => {
+                            return(
+                                <Card image={tattoo.image} image={tattoo.image} preco={tattoo.preco} />
+                            )
+                        })
                     }
                 </div>
             </section>

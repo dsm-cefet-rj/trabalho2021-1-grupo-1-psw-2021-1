@@ -9,7 +9,7 @@ export default function ProfessionalProfile() {
 
     let [follower, setFollower] = useState(818);
     let [follow, setFollow] = useState("Seguir");
-    let [tatuagens, setTatuagens] = useState([]);
+    let [tattoos, setTattoo] = useState([]);
 
     
 
@@ -22,9 +22,8 @@ export default function ProfessionalProfile() {
     }
 
     useEffect(async () => {
-        const {data} = await api.get("/tatuador?:2")
-        setTatuagens(data[0].tattoos);
-        console.log(data[0].tattoos)
+        const {data} = await api.get("/tattoos?user_id=2")
+        setTattoo(data);
     }, []);
 
     return (
@@ -59,10 +58,10 @@ export default function ProfessionalProfile() {
                 </div>
 
                 {
-                    tatuagens.map(tatuagem => {
-                            const id_tattoo = tatuagem.id
+                    tattoos.map(tattoo => {
+                            const id_tattoo = tattoo.id
                             const link = "/editTattoo/2/"+ id_tattoo
-                            return (<Link to={link}> <Card image={tatuagem.image} preco={tatuagem.preco} /> </Link>)}
+                            return (<Link to={link}> <Card image={tattoo.image} preco={tattoo.preco} /> </Link>)}
                         ) 
                 }
             </section>
