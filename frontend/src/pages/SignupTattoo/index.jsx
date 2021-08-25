@@ -1,4 +1,4 @@
-// import "../../styles/SignupTattoo.css";
+import "../../styles/SignupTattoo.css";
 
 export default function SignUpTattoo() {
     return (
@@ -15,7 +15,7 @@ export default function SignUpTattoo() {
 
                 <div class="input-container description">
                     <label for="description" class="form-content">Descrição:</label>
-                    <textarea name="description" placeholder="Descrição da tatuagem"></textarea>
+                   <div class="content-textarea"> <textarea name="description" placeholder="Descrição da tatuagem"></textarea> </div>
                 </div>
 
                 <div class="input-container tag">

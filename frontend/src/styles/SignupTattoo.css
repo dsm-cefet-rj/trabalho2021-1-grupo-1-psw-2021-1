@@ -1,28 +1,20 @@
-body {
-    align-items: center;
-    background-color: #494747;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #0D0D0D;
+}
 
-  }
-  
   main{
     background-color: #f2f2f2;
-    border-radius: 20px;
     box-sizing: border-box;
-    border: 2px solid #0D0D0D ;
-    height: 100%;
-    padding: 20px;
-    width: 100%;
+    margin: auto;
   }
 
-  
   form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    
     height: 100%;
     width: 100%;
   }
@@ -30,8 +22,7 @@ body {
   .form-content{
     display: inline-block;
     margin: 0.7rem 0;
-    color: #0D0D0D;
-    text-align: center;
+    text-align: left;
 }
 
   .title{
@@ -39,6 +30,7 @@ body {
     align-content: center;
     justify-content: center;
   }
+
   .title input {
     color: #0D0D0D;
     font-size: 24px;
@@ -65,16 +57,19 @@ body {
   .description{
     height: auto;
   }
+  .content-textarea{
+    width: 100%;
+    text-align: center;
+  }
   .description textarea{
       margin-top: 10px;
-      margin-left: 5%;
       border-radius: 5px;
       border: 1px solid #0D0D0D;
       box-sizing: border-box;
       font-size: 12px;
-      height: 60px;
+      height: 10vh;
       outline: 0;
-      width: 90%;
+      width: 80%;
       resize: none;
   }
 
@@ -83,6 +78,7 @@ body {
   }
   .tag #tag-labels{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
   
@@ -97,8 +93,9 @@ body {
   }
 
   .price input{
-    width: 20%;
+    width: 10%;
     height: 70%;
+    margin: 3vh 0 0 2vh;
     font-size: 28px;
     font-weight: 600;
     background-color: transparent;
@@ -108,41 +105,13 @@ body {
   }
 
   #button-container{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #button-container button:first-child{
-    justify-self: flex-end;
-    background-color: transparent;
-    border-radius: 12px;
-    border: 1px solid #0D0D0D;
-    box-sizing: border-box;
-    color: #0D0D0D;
-    cursor: pointer;
-    font-size: 16px;
-    justify-self: center ;
-    margin-top: 20px;
-    outline: 0;
-    text-align: center;
-    padding: 0.5em 1em;
-  }
-
-  .submit {
-    background-color: #0D0D0D;
-    border-radius: 12px;
-    border: none;
-    box-sizing: border-box;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    justify-self: center ;
-    margin-top: 20px;
-    outline: 0;
-    text-align: center;
-    padding: 0.5em 1em;
+    margin-top: 5vh;
   }
   
+  #button-container .submit{
+    margin-left: 2vh;
+  }
+
   .submit:active {
     background-color: #494747;
   }
