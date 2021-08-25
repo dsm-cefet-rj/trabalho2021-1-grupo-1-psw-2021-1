@@ -151,6 +151,8 @@ body{
     float: right;
 }
 
+/* OCULTANDO MENU NÃO COMPONENTIZADO
+
 #nav-container{
     position: fixed;
     bottom: 0;
@@ -171,6 +173,7 @@ body{
 #nav-container ul li{
     display: inline-block;
 }
+*/
 
 @media screen and (min-width: 720px) {
 

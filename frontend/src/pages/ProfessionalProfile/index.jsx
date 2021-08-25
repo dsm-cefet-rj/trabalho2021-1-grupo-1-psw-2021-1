@@ -55,7 +55,10 @@ export default function ProfessionalProfile() {
                 <Card image="./pen.svg" preco="R$ 100,00"/>
             </section>
 
-            <nav id="nav-container">
+
+             {/* COMENTANDO APENAS O SEGUNDO MENU, NÃO COMPONENTIZADO 
+
+             <nav id="nav-container">
                 <ul>
                     <Link to="/">
                         <img src="./home.svg" alt="Home"/>
@@ -68,6 +71,8 @@ export default function ProfessionalProfile() {
                     </Link>
                 </ul>
             </nav>
+            
+            */}
         </main>
     )
 }
