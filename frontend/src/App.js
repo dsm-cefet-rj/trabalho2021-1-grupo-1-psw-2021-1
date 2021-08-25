@@ -9,6 +9,9 @@ import PaymentConfirm from './pages/PaymentConfirm';
 import ProfessionalProfile from './pages/ProfessionalProfile';
 import SignupClient from './pages/SignupClient';
 import SignupTattoo from './pages/SignupTattoo';
+import EditTattoo from './pages/EditTattoo';
+
+import "./styles/Root.css"
 
 function App() {
     return (
@@ -20,6 +23,9 @@ function App() {
                 </Route>
                 <Route path="/me/paymentId">
                     <Payment />
+                </Route>
+                <Route path="/editTattoo">
+                    <EditTattoo />
                 </Route>
                 <Route path="/me/newTattoo">
                     <SignupTattoo />

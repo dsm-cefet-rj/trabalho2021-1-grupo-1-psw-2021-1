@@ -2,57 +2,207 @@
     "users": [
         {
             "id": 1,
-            "login": "olamundo", 
+            "login": "olamundo",
             "senha": "senha123"
-        }, 
+        },
         {
-            "id": 2, 
-            "login": "tatuador", 
+            "id": 2,
+            "login": "tatuador",
             "senha": "senha456"
+        },
+        {
+            "id": 3,
+            "login": "tatuador2",
+            "senha": ""
         }
-    ], 
-
+    ],
+    "tatuador": [
+        {
+            "id": 2,
+            "tattoos": [
+                {
+                    "id": 1,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo1.jpg",
+                    "preco": "R$ 800,00",
+                    "user_id": 2
+                },
+                {
+                    "id": 2,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo2.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                },
+                {
+                    "id": 3,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo3.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                },
+                {
+                    "id": 4,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo4.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "tattoos": [
+                {
+                    "id": 1,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo1.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                },
+                {
+                    "id": 2,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo2.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                },
+                {
+                    "id": 3,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo3.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                },
+                {
+                    "id": 4,
+                    "tags": [
+                        "tribal",
+                        "rustica",
+                        "colorida"
+                    ],
+                    "image": "./exemplo4.jpg",
+                    "preco": "R$ 500,00",
+                    "user_id": 2
+                }
+            ]
+        }
+    ],
     "tattoos": [
         {
-            "id": 1, 
-            "tags": ["tribal", "rustica", "colorida"],
+            "id": 1,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
             "image": "./exemplo1.jpg",
             "preco": "R$ 500,00",
             "user_id": 2
         },
         {
-            "id": 2, 
-            "tags": ["tribal", "rustica", "colorida"],
+            "id": 2,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
             "image": "./exemplo2.jpg",
-            "preco": "R$ 500,00", 
+            "preco": "R$ 500,00",
             "user_id": 2
         },
         {
-            "id": 3, 
-            "tags": ["tribal", "rustica", "colorida"],
+            "id": 3,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
             "image": "./exemplo3.jpg",
-            "preco": "R$ 500,00", 
+            "preco": "R$ 500,00",
             "user_id": 2
         },
         {
-            "id": 4, 
-            "tags": ["tribal", "rustica", "colorida"],
+            "id": 4,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
             "image": "./exemplo4.jpg",
-            "preco": "R$ 500,00", 
+            "preco": "R$ 500,00",
             "user_id": 2
         },
         {
-            "id": 5, 
-            "tags": ["tribal", "rustica", "colorida"],
-            "image": "./exemplo5.jpg",
-            "preco": "R$ 500,00", 
+            "id": 1,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
+            "image": "./exemplo1.jpg",
+            "preco": "R$ 500,00",
             "user_id": 2
         },
         {
-            "id": 6, 
-            "tags": ["tribal", "rustica", "colorida"],
-            "image": "./exemplo6.jpg",
-            "preco": "R$ 500,00", 
+            "id": 2,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
+            "image": "./exemplo2.jpg",
+            "preco": "R$ 500,00",
+            "user_id": 2
+        },
+        {
+            "id": 3,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
+            "image": "./exemplo3.jpg",
+            "preco": "R$ 500,00",
+            "user_id": 2
+        },
+        {
+            "id": 4,
+            "tags": [
+                "tribal",
+                "rustica",
+                "colorida"
+            ],
+            "image": "./exemplo4.jpg",
+            "preco": "R$ 500,00",
             "user_id": 2
         }
     ]

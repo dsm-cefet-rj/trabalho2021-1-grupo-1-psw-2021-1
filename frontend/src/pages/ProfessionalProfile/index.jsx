@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import { api } from "../../services/api";
 import Card from "../../components/Card";
 
 import "../../styles/ProfessionalProfile.css";
@@ -9,6 +9,9 @@ export default function ProfessionalProfile() {
 
     let [follower, setFollower] = useState(818);
     let [follow, setFollow] = useState("Seguir");
+    let [tatuagens, setTatuagens] = useState([]);
+
+    
 
     function handleFollow(){
         if(follow === "Seguindo"){
@@ -17,6 +20,12 @@ export default function ProfessionalProfile() {
             return(setFollower(follower + 1), setFollow("Seguindo"));
         }
     }
+
+    useEffect(async () => {
+        const {data} = await api.get("/tatuador?:2")
+        setTatuagens(data[0].tattoos);
+        console.log(data[0].tattoos)
+    }, []);
 
     return (
         <main id="container">
@@ -49,10 +58,13 @@ export default function ProfessionalProfile() {
                     <button>Mais vendidas</button>
                 </div>
 
-                <Card image="./exemplo1.jpg" preco="R$ 100,00"/>
-                <Card image="./exemplo2.jpg" preco="R$ 100,00"/>
-                <Card image="./exemplo3.jpg" preco="R$ 100,00"/>
-                <Card image="./exemplo4.jpg" preco="R$ 100,00"/>
+                {
+                    tatuagens.map(tatuagem => {
+                            const id_tattoo = tatuagem.id
+                            const link = "/editTattoo/2/"+ id_tattoo
+                            return (<Link to={link}> <Card image={tatuagem.image} preco={tatuagem.preco} /> </Link>)}
+                        ) 
+                }
             </section>
 
 

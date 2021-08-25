@@ -8,7 +8,7 @@ import "../../styles/Home.css"
 
 export default function Home() {
 
-    let [tattoos, setTattoos] = useState({});
+    let [tattoos, setTattoos] = useState([]);
 
     useEffect(() => {
         const cards = document.querySelectorAll(".cards");
@@ -33,10 +33,11 @@ export default function Home() {
         })
     })
 
-    useEffect( async () => {
-        setTattoos( await api.get("/tattoos"));
-        console.log(tattoos)
-    }, {});
+    useEffect(async () => {
+        const { data } = await api.get("tatuador/")
+        setTattoos(data[0].tattoos);
+        console.log(data[0].tattoos)
+    }, []);
 
     return (
         <>
@@ -50,13 +51,10 @@ export default function Home() {
                     <input type="search" placeholder="Encontre o que procura" />
                 </div>
                 <div id="feed-container">
-                    <Card image="./exemplo2.jpg" preco="R$ 100,00" />
-                    <Card image="./exemplo3.jpg" preco="R$ 350,00" />
-                    <Card image="./exemplo4.jpg" preco="R$ 300,00" />
-                    <Card image="./exemplo5.jpg" preco="R$ 270,00" />
-                    <Card image="./exemplo6.jpg" preco="R$ 800,00" />
-                    <Card image="./exemplo5.jpg" preco="R$ 270,00" />
-                    <Card image="./exemplo6.jpg" preco="R$ 800,00" />
+                    {
+                        tattoos.map(tatuagem => <Card image={tatuagem.image} preco={tatuagem.preco} />)
+                    }
+
                 </div>
             </section>
         </>
