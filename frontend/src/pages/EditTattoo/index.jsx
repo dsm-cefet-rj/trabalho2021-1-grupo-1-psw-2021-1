@@ -9,13 +9,16 @@ import "../../styles/EditTattoo.css";
 
 export default function EditTattoo() {
     
-    let [tattoo, setTattoo] = useState();
+    let [tattoo, setTattoo] = useState([]);
+    console.log(tattoo)
     const params = useParams();
-
+    let cont = 0
     useEffect(async () => {
 
-        let {data} = api.get("/tatuador/2");
-        console.log(data)
+        let {data} = await api.get("/tattoos/?user_id="+params.id_tatuador+"&id="+params.id_tatuagem);
+        console.log(data);
+        setTattoo(data[0])
+        
     }, [])
 
 
@@ -23,58 +26,42 @@ export default function EditTattoo() {
         <main>
             <form action="#" method="POST" id="form-container">
                 <div class="title">
-                    <input type="text" placeholder="Nome Tatuagem" />
+                    <input type="text" placeholder={tattoo.name}/>
                 </div>
 
                 <div class="input-container image">
-                    <img src="#" alt="Imagem da arte da nova tatuagem" />
+                    <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" />
                     <input type="file" />
                 </div>
 
                 <div class="input-container description">
                     <label for="description" class="form-content">Descrição:</label>
-                   <div class="content-textarea"> <textarea name="description" placeholder="Descrição da tatuagem"></textarea> </div>
+                   <div class="content-textarea"> <textarea name="description" placeholder={tattoo.description}></textarea> </div>
                 </div>
 
                 <div class="input-container tag">
                     <label class="form-content">Tags:</label>
-                    <div id="tag-labels">
-                        <span>
-                            <label>Tribais</label>
-                            <input type="checkbox" />
-                        </span>
-                        <span>
-                            <label>Tribais</label>
-                            <input type="checkbox" />
-                        </span>
-                        <span>
-                            <label>Tribais</label>
-                            <input type="checkbox" />
-                        </span>
-                        <span>
-                            <label>Tribais</label>
-                            <input type="checkbox" />
-                        </span>
-                        <span>
-                            <label>Tribais</label>
-                            <input type="checkbox" />
-                        </span>
-
+                    <div id="tag-labels">                 
+                    {
+                        tattoo.tags.map(tag => {
+                                return <span> <label>{tag}</label><input type="checkbox" value="on"/></span>
+                            }) 
+                    }     
                         <button>Adicionar outro</button>
                     </div>
                 </div>
 
                 <div class="input-container price">
                     <label for="price">R$</label>
-                    <input type="number" />
+                    <input type="number" placeholder={tattoo.preco.substring(3)}/>
                 </div>
 
                 <div id="button-container">
                     <button type="text">
-                        <a href="Perfil_tatuador.html">VOLTAR</a>
+                        <a href="tatuadorId/">VOLTAR</a>
                     </button>
                     <button type="text" class="submit">
-                        <a href="Perfil_tatuador.html">SALVAR</a>
+                        <a href="tatuadorId/">SALVAR</a>
                     </button>
                 </div>
 

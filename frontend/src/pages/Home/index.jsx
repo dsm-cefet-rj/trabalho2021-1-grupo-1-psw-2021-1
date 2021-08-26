@@ -53,7 +53,7 @@ export default function Home() {
                     {
                         tattoos.map(tattoo => {
                             return(
-                                <Card image={tattoo.image} image={tattoo.image} preco={tattoo.preco} />
+                                <Card image={tattoo.image} preco={tattoo.preco} login = {api.get("/users/?id="+tattoo.user_id).name} />
                             )
                         })
                     }

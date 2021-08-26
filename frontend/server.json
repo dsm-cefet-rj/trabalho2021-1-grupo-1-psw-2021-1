@@ -1,36 +1,41 @@
 {
     "users": [
         {
+            "id": 0,
+            "name": "teste0",
+            "senha": "senha123"
+        },
+        {
             "id": 1,
-            "name": "teste1", 
+            "name": "teste1",
             "senha": "senha123"
         },
         {
             "id": 2,
-            "name": "teste2", 
+            "name": "teste2",
             "senha": "senha123"
         },
         {
             "id": 3,
-            "name": "teste3", 
+            "name": "teste3",
             "senha": "senha123"
         },
         {
             "id": 4,
-            "name": "teste4", 
+            "name": "teste4",
             "senha": "senha123"
         },
         {
             "id": 5,
-            "name": "teste5", 
+            "name": "teste5",
             "senha": "senha123"
         },
         {
             "id": 6,
-            "name": "teste6", 
+            "name": "teste6",
             "senha": "senha123"
         }
-    ], 
+    ],
     "tattoos": [
         {
             "id": 0,
@@ -38,10 +43,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
+            "description": "essa tatuagem é maneira",
             "image": "./exemplo1.jpg",
-            "preco": "R$ 500,00", 
-            "user_id": 1
+            "preco": "R$ 500,00",
+            "user_id": 1,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 1,
@@ -49,10 +55,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo2.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo2.jpg",
             "preco": "R$ 500,00",
-            "user_id": 2
+            "user_id": 2,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 2,
@@ -60,10 +67,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo3.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo3.jpg",
             "preco": "R$ 500,00",
-            "user_id": 3
+            "user_id": 3,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 3,
@@ -71,10 +79,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo4.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo4.jpg",
             "preco": "R$ 500,00",
-            "user_id": 4
+            "user_id": 4,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 4,
@@ -82,10 +91,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo5.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo5.jpg",
             "preco": "R$ 500,00",
-            "user_id": 5
+            "user_id": 5,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 5,
@@ -93,10 +103,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo6.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo6.jpg",
             "preco": "R$ 500,00",
-            "user_id": 6
+            "user_id": 6,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 6,
@@ -104,10 +115,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo1.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo1.jpg",
             "preco": "R$ 500,00",
-            "user_id": 1
+            "user_id": 1,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 7,
@@ -115,10 +127,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo2.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo2.jpg",
             "preco": "R$ 500,00",
-            "user_id": 2
+            "user_id": 2,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 8,
@@ -126,10 +139,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo3.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo3.jpg",
             "preco": "R$ 500,00",
-            "user_id": 3
+            "user_id": 3,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 9,
@@ -137,10 +151,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo4.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo4.jpg",
             "preco": "R$ 500,00",
-            "user_id": 4
+            "user_id": 4,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 10,
@@ -148,10 +163,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo5.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo5.jpg",
             "preco": "R$ 500,00",
-            "user_id": 5
+            "user_id": 5,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 11,
@@ -159,10 +175,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo6.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo6.jpg",
             "preco": "R$ 500,00",
-            "user_id": 6
+            "user_id": 6,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 12,
@@ -170,10 +187,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo1.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo1.jpg",
             "preco": "R$ 500,00",
-            "user_id": 1
+            "user_id": 1,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 13,
@@ -181,10 +199,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo2.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo2.jpg",
             "preco": "R$ 500,00",
-            "user_id": 2
+            "user_id": 2,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 14,
@@ -192,10 +211,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo3.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo3.jpg",
             "preco": "R$ 500,00",
-            "user_id": 3
+            "user_id": 3,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 15,
@@ -203,10 +223,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo4.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo4.jpg",
             "preco": "R$ 500,00",
-            "user_id": 4
+            "user_id": 4,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 16,
@@ -214,10 +235,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo5.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo5.jpg",
             "preco": "R$ 500,00",
-            "user_id": 5
+            "user_id": 5,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 17,
@@ -225,10 +247,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo6.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo6.jpg",
             "preco": "R$ 500,00",
-            "user_id": 6
+            "user_id": 6,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 18,
@@ -236,10 +259,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo1.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo1.jpg",
             "preco": "R$ 500,00",
-            "user_id": 1
+            "user_id": 1,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 19,
@@ -247,10 +271,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo2.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo2.jpg",
             "preco": "R$ 500,00",
-            "user_id": 2
+            "user_id": 2,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 20,
@@ -258,10 +283,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo3.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo3.jpg",
             "preco": "R$ 500,00",
-            "user_id": 3
+            "user_id": 3,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 20,
@@ -269,10 +295,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo4.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo4.jpg",
             "preco": "R$ 500,00",
-            "user_id": 4
+            "user_id": 4,
+            "name": "A MAIS BRABA"
         },
         {
             "id": 21,
@@ -280,10 +307,11 @@
                 "tribal",
                 "colorida"
             ],
-            "description": "essa tatuagem é maneira", 
-            "image": "./exemplo5.jpg", 
+            "description": "essa tatuagem é maneira",
+            "image": "./exemplo5.jpg",
             "preco": "R$ 500,00",
-            "user_id": 5
+            "user_id": 5,
+            "name": "A MAIS BRABA"
         }
     ]
 }
