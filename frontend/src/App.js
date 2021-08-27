@@ -27,7 +27,7 @@ function App() {
                 <Route path="/me/newTattoo">
                     <SignupTattoo />
                 </Route>
-                <Route path="/editTattoo/:id_tatuador/:id_tatuagem" component={EditTattoo}/>
+                <Route path="/editTattoo/:id_tattoo" component={EditTattoo}/>
                 <Route path="/tatuadorId">
                     <ProfessionalProfile />
                 </Route>

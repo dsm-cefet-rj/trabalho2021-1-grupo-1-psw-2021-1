@@ -9,14 +9,13 @@ import "../../styles/EditTattoo.css";
 
 export default function EditTattoo() {
     
-    let [tattoo, setTattoo] = useState();
+    let [tattoo, setTattoo] = useState([]);
     const params = useParams();
-
+    
     useEffect(async () => {
-
-        let {data} = api.get("/tatuador/2");
-        console.log(data)
-    }, [])
+        let { data } = await api.get(`tattoos?id=${params.id_tattoo}`);
+        setTattoo(data[0]);
+    }, []);
 
 
     return (
@@ -27,15 +26,15 @@ export default function EditTattoo() {
                 </div>
 
                 <div class="input-container image">
-                    <img src="#" alt="Imagem da arte da nova tatuagem" />
+                    <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" />
                     <input type="file" />
                 </div>
 
                 <div class="input-container description">
                     <label for="description" class="form-content">Descrição:</label>
-                   <div class="content-textarea"> <textarea name="description" placeholder="Descrição da tatuagem"></textarea> </div>
+                   <div class="content-textarea"> <textarea name="description"></textarea> </div>
                 </div>
-
+                
                 <div class="input-container tag">
                     <label class="form-content">Tags:</label>
                     <div id="tag-labels">
