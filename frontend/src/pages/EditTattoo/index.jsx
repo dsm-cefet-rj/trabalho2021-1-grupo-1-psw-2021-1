@@ -9,16 +9,16 @@ import "../../styles/EditTattoo.css";
 
 export default function EditTattoo() {
     
-    let [tattoo, setTattoo] = useState([]);
+    let [tattoo, setTattoo] = useState({tags:[],preco:""});
     console.log(tattoo)
     const params = useParams();
-    let cont = 0
-    useEffect(async () => {
-
-        let {data} = await api.get("/tattoos/?user_id="+params.id_tatuador+"&id="+params.id_tatuagem);
-        console.log(data);
-        setTattoo(data[0])
-        
+    useEffect(() => {
+        async function fetchTattoo (){
+            let {data} = await api.get("/tattoos/?user_id="+params.id_tatuador+"&id="+params.id_tatuagem);
+            console.log(data);
+            setTattoo(data[0])
+        }        
+        fetchTattoo()
     }, [])
 
 

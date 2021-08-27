@@ -7,7 +7,7 @@ export default function Card(props) {
             <img src={props.image} alt="Imagem da tatuagem" />
             <div className="art-info">
                 <h6>Nome da tatuagem e descrição</h6>
-                <a href="tatuadorId/">
+                <a href={props.link}>
                     Feita por: @{props.login}
                 </a>
                 <p>{props.preco}</p>

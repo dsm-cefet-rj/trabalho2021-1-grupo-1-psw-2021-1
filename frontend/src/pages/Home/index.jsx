@@ -9,6 +9,7 @@ import "../../styles/Home.css"
 export default function Home() {
 
     let [tattoos, setTattoos] = useState([]);
+    let [tatuadores, setTatuadores] = useState([])
 
     useEffect(() => {
         const cards = document.querySelectorAll(".cards");
@@ -38,6 +39,11 @@ export default function Home() {
         setTattoos(data);
     }, []);
 
+    useEffect(async() =>{
+        const {data} = await api.get("/users")
+        setTatuadores(data)
+    },[]);
+
     return (
         <div>
             <header>
@@ -53,7 +59,7 @@ export default function Home() {
                     {
                         tattoos.map(tattoo => {
                             return(
-                                <Card image={tattoo.image} preco={tattoo.preco} login = {api.get("/users/?id="+tattoo.user_id).name} />
+                                <Card image={tattoo.image} preco={tattoo.preco} link={"profile/"+tattoo.user_id} login = {tatuadores.map(tatuador=>{if(tatuador.id == tattoo.user_id){return tatuador.name}})}/>
                             )
                         })
                     }

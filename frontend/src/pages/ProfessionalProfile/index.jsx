@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { api } from "../../services/api";
 import Card from "../../components/Card";
@@ -10,7 +11,7 @@ export default function ProfessionalProfile() {
     let [follower, setFollower] = useState(818);
     let [follow, setFollow] = useState("Seguir");
     let [tattoos, setTattoo] = useState([]);
-
+    const params = useParams();
     
 
     function handleFollow(){
@@ -22,7 +23,7 @@ export default function ProfessionalProfile() {
     }
 
     useEffect(async () => {
-        const {data} = await api.get("/tattoos?user_id=2")
+        const {data} = await api.get("/tattoos?user_id="+params.id_tatuador)
         setTattoo(data);
     }, []);
 
@@ -60,7 +61,7 @@ export default function ProfessionalProfile() {
                 {
                     tattoos.map(tattoo => {
                             const id_tattoo = tattoo.id
-                            const link = "/editTattoo/2/"+ id_tattoo
+                            const link = "/editTattoo/"+params.id_tatuador+"/"+ id_tattoo
                             return (<Link to={link}> <Card image={tattoo.image} preco={tattoo.preco} /> </Link>)}
                         ) 
                 }
