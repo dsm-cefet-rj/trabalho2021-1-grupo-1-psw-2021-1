@@ -44,7 +44,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneiraaaa",
-      "image": "./exemplo1.jpg",
+      "image": "/assets/images/exemplo1.jpg",
       "preco": "250",
       "user_id": 1,
       "name": "A MAIS BRABA"
@@ -56,7 +56,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo2.jpg",
+      "image": "/assets/images/exemplo2.jpg",
       "preco": 500,
       "user_id": 2,
       "name": "A MAIS BRABA"
@@ -68,7 +68,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo3.jpg",
+      "image": "/assets/images/exemplo3.jpg",
       "preco": 500,
       "user_id": 3,
       "name": "A MAIS BRABA"
@@ -80,7 +80,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo4.jpg",
+      "image": "/assets/images/exemplo4.jpg",
       "preco": 500,
       "user_id": 4,
       "name": "A MAIS BRABA"
@@ -92,7 +92,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo5.jpg",
+      "image": "/assets/images/exemplo5.jpg",
       "preco": 500,
       "user_id": 5,
       "name": "A MAIS BRABA"
@@ -104,7 +104,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo6.jpg",
+      "image": "/assets/images/exemplo6.jpg",
       "preco": 500,
       "user_id": 6,
       "name": "A MAIS BRABA"
@@ -116,7 +116,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo1.jpg",
+      "image": "/assets/images/exemplo1.jpg",
       "preco": 500,
       "user_id": 1,
       "name": "A MAIS BRABA"
@@ -128,7 +128,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo2.jpg",
+      "image": "/assets/images/exemplo2.jpg",
       "preco": 500,
       "user_id": 2,
       "name": "A MAIS BRABA"
@@ -140,7 +140,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo3.jpg",
+      "image": "/assets/images/exemplo3.jpg",
       "preco": 500,
       "user_id": 3,
       "name": "A MAIS BRABA"
@@ -152,7 +152,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo4.jpg",
+      "image": "/assets/images/exemplo4.jpg",
       "preco": 500,
       "user_id": 4,
       "name": "A MAIS BRABA"
@@ -164,7 +164,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo5.jpg",
+      "image": "/assets/images/exemplo5.jpg",
       "preco": 500,
       "user_id": 5,
       "name": "A MAIS BRABA"
@@ -176,7 +176,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo6.jpg",
+      "image": "/assets/images/exemplo6.jpg",
       "preco": 500,
       "user_id": 6,
       "name": "A MAIS BRABA"
@@ -188,7 +188,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo1.jpg",
+      "image": "/assets/images/exemplo1.jpg",
       "preco": 500,
       "user_id": 1,
       "name": "A MAIS BRABA"
@@ -200,7 +200,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo2.jpg",
+      "image": "/assets/images/exemplo2.jpg",
       "preco": 500,
       "user_id": 2,
       "name": "A MAIS BRABA"
@@ -212,7 +212,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo3.jpg",
+      "image": "/assets/images/exemplo3.jpg",
       "preco": 500,
       "user_id": 3,
       "name": "A MAIS BRABA"
@@ -224,7 +224,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo4.jpg",
+      "image": "/assets/images/exemplo4.jpg",
       "preco": 500,
       "user_id": 4,
       "name": "A MAIS BRABA"
@@ -236,7 +236,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo5.jpg",
+      "image": "/assets/images/exemplo5.jpg",
       "preco": 500,
       "user_id": 5,
       "name": "A MAIS BRABA"
@@ -248,7 +248,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo6.jpg",
+      "image": "/assets/images/exemplo6.jpg",
       "preco": 500,
       "user_id": 6,
       "name": "A MAIS BRABA"
@@ -260,7 +260,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo1.jpg",
+      "image": "/assets/images/exemplo1.jpg",
       "preco": 500,
       "user_id": 1,
       "name": "A MAIS BRABA"
@@ -272,7 +272,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo2.jpg",
+      "image": "/assets/images/exemplo2.jpg",
       "preco": 500,
       "user_id": 2,
       "name": "A MAIS BRABA"
@@ -284,7 +284,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo3.jpg",
+      "image": "/assets/images/exemplo3.jpg",
       "preco": 500,
       "user_id": 3,
       "name": "A MAIS BRABA"
@@ -296,7 +296,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo4.jpg",
+      "image": "/assets/images/exemplo4.jpg",
       "preco": 500,
       "user_id": 4,
       "name": "A MAIS BRABA"
@@ -308,7 +308,7 @@
         "colorida"
       ],
       "description": "essa tatuagem é maneira",
-      "image": "./exemplo5.jpg",
+      "image": "/assets/images/exemplo5.jpg",
       "preco": 500,
       "user_id": 5,
       "name": "A MAIS BRABA"
@@ -397,71 +397,6 @@
       "imge": "",
       "user_id": "1",
       "id": 29
-    },
-    {
-      "tags": [
-        "Old School",
-        "Geek"
-      ],
-      "preco": "250",
-      "name": "nahnaha",
-      "description": "aushduashdiuas",
-      "imge": "",
-      "user_id": "1",
-      "image": "C:\\fakepath\\Imagem1.png",
-      "id": 30
-    },
-    {
-      "tags": [
-        "Old School",
-        "Geek"
-      ],
-      "preco": "250",
-      "name": "nahnaha",
-      "description": "aushduashdiuas",
-      "imge": "",
-      "user_id": "1",
-      "image": "C:\\fakepath\\Imagem1.png",
-      "id": 31
-    },
-    {
-      "tags": [
-        "Old School",
-        "Geek"
-      ],
-      "preco": "250",
-      "name": "nahnaha",
-      "description": "aushduashdiuas",
-      "imge": "",
-      "user_id": "1",
-      "image": "C:\\fakepath\\Imagem1.png",
-      "id": 32
-    },
-    {
-      "tags": [
-        "Old School",
-        "Geek"
-      ],
-      "preco": "250",
-      "name": "nahnaha",
-      "description": "aushduashdiuas",
-      "imge": "",
-      "user_id": "1",
-      "image": "C:\\fakepath\\Imagem1.png",
-      "id": 33
-    },
-    {
-      "tags": [
-        "Old School",
-        "Geek"
-      ],
-      "preco": "250",
-      "name": "nahnaha",
-      "description": "aushduashdiuas",
-      "imge": "",
-      "user_id": "1",
-      "image": "C:\\fakepath\\Imagem1.png",
-      "id": 34
     }
   ]
 }
