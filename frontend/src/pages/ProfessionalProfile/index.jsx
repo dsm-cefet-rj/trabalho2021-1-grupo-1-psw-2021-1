@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { api } from "../../services/api";
@@ -12,18 +12,18 @@ export default function ProfessionalProfile() {
     let [follow, setFollow] = useState("Seguir");
     let [tattoos, setTattoo] = useState([]);
     const params = useParams();
-    
 
-    function handleFollow(){
-        if(follow === "Seguindo"){
-            return(setFollower(follower - 1), setFollow("Seguir"));
+
+    function handleFollow() {
+        if (follow === "Seguindo") {
+            return (setFollower(follower - 1), setFollow("Seguir"));
         } else {
-            return(setFollower(follower + 1), setFollow("Seguindo"));
+            return (setFollower(follower + 1), setFollow("Seguindo"));
         }
     }
 
     useEffect(async () => {
-        const {data} = await api.get("/tattoos?user_id="+params.id_tatuador)
+        const { data } = await api.get("/tattoos?user_id=" + params.id_tatuador)
         setTattoo(data);
     }, []);
 
@@ -32,11 +32,11 @@ export default function ProfessionalProfile() {
             <header id="header-container">
                 <section id="info-container">
                     <div id="img-container">
-                        <img src="./img-profile.jpg" alt="Imagem de perfil do tatuador" />
+                        <img src={"/assets/images/img-profile.jpg"} alt="Imagem de perfil do tatuador" />
                     </div>
                     <h2 id="username">Username</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src="./edit.svg" alt="editar" />
+                        <img id="edit-icon" src={"/assets/images/edit.svg"} alt="editar" />
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>
@@ -60,15 +60,16 @@ export default function ProfessionalProfile() {
 
                 {
                     tattoos.map(tattoo => {
-                            const id_tattoo = tattoo.id
-                            const link = "/editTattoo/"+params.id_tatuador+"/"+ id_tattoo
-                            return (<Link to={link}> <Card image={tattoo.image} preco={tattoo.preco} /> </Link>)}
-                        ) 
+                        const id_tattoo = tattoo.id
+                        const link = "/editTattoo/" + params.id_tatuador + "/" + id_tattoo
+                        return (<Link to={link}> <Card image={tattoo.image} preco={tattoo.preco} /> </Link>)
+                    }
+                    )
                 }
             </section>
 
 
-             {/* COMENTANDO APENAS O SEGUNDO MENU, NÃO COMPONENTIZADO 
+            {/* COMENTANDO APENAS O SEGUNDO MENU, NÃO COMPONENTIZADO 
 
              <nav id="nav-container">
                 <ul>

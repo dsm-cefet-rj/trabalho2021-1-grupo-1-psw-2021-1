@@ -39,27 +39,27 @@ export default function Home() {
         setTattoos(data);
     }, []);
 
-    useEffect(async() =>{
-        const {data} = await api.get("/users")
+    useEffect(async () => {
+        const { data } = await api.get("/users")
         setTatuadores(data)
-    },[]);
+    }, []);
 
     return (
         <div>
             <header>
                 <Link id="logo" to="/">
-                    <img src="./Logo PSW.svg" alt="Logotipo do Tatuando" id="logo" />
+                    <img src={"/assets/images/Logo_PSW.svg"} alt="Logotipo do Tatuando" id="logo" />
                 </Link>
             </header>
             <section>
                 <div id="search-container">
                     <input type="search" placeholder="Encontre o que procura" />
                 </div>
-                <div id="feed-container">   
+                <div id="feed-container">
                     {
                         tattoos.map(tattoo => {
-                            return(
-                                <Card image={tattoo.image} preco={tattoo.preco} link={"profile/"+tattoo.user_id} login = {tatuadores.map(tatuador=>{if(tatuador.id == tattoo.user_id){return tatuador.name}})}/>
+                            return (
+                                <Card image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name } })} />
                             )
                         })
                     }

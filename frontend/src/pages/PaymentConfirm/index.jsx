@@ -18,7 +18,7 @@ export default function PaymentConfirm() {
                     <p>Tatto tribal costas</p>
                 </div>
                 <div id="img-data">
-                    <img src="./exemplo1.jpg" alt="Miniatura da tatuagem"/>
+                    <img src={"/assets/images/exemplo1.jpg"} alt="Miniatura da tatuagem" />
                 </div>
                 <div id="total-data">
                     <h3>Valor</h3>

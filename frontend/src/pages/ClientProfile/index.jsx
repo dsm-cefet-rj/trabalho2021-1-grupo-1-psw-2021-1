@@ -8,11 +8,11 @@ export default function ClientProfile() {
             <header id="header-container">
                 <section id="info-container">
                     <div id="img-container">
-                        <img src="./img-profile.jpg" alt="Imagem de perfil do tatuador" />
+                        <img src={"/assets/images/img-profile.jpg"} alt="Imagem de perfil do tatuador" />
                     </div>
                     <h2 id="username">Username</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src="./edit.svg" alt="Editar pergil"/>
+                        <img id="edit-icon" src={"/assets/images/edit.svg"} alt="Editar pergil" />
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>
@@ -33,10 +33,10 @@ export default function ClientProfile() {
                     <button>Minhas tattos</button>
                     <button>Tatuadores</button>
                 </div>
-                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
-                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
-                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
-                <Card image="./tattoo exemplo.jpg"preco="R$ 100,00"/>
+                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
+                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
+                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
+                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
             </section>
         </main>
 
