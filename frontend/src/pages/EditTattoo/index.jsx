@@ -8,6 +8,7 @@ import "../../styles/EditTattoo.css";
 
 
 export default function EditTattoo() {
+<<<<<<< HEAD
 
     const inicialValues = { tags: [], 
                             preco: 0, 
@@ -15,9 +16,14 @@ export default function EditTattoo() {
                             description: "",
                             imge: ""} 
     let [tattoo, setTattoo] = useState(inicialValues);
+=======
+    
+    let [tattoo, setTattoo] = useState([]);
+>>>>>>> e25e305d305276ff6dc6283ffaad41796290e581
     const params = useParams();
-
+    
     useEffect(async () => {
+<<<<<<< HEAD
         let { data } = await api.get(`/tattoos/?user_id=${params.id_tatuador}&id=${params.id_tatuagem}`);
         setTattoo(data[0]);
     }, []);
@@ -46,6 +52,11 @@ export default function EditTattoo() {
     function addTag(event){
 
     }
+=======
+        let { data } = await api.get(`tattoos?id=${params.id_tattoo}`);
+        setTattoo(data[0]);
+    }, []);
+>>>>>>> e25e305d305276ff6dc6283ffaad41796290e581
 
 
     return (
@@ -55,6 +66,7 @@ export default function EditTattoo() {
                     <input type="text" name="title" value={tattoo.name} onChange={onChange}/>
                 </div>
 
+<<<<<<< HEAD
                 <div className="input-container image">
                     <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" onChange={onChange} />
                     <input type="file" name="image" />
@@ -67,6 +79,20 @@ export default function EditTattoo() {
 
                 <div className="input-container tag">
                     <label className="form-content">Tags:</label>
+=======
+                <div class="input-container image">
+                    <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" />
+                    <input type="file" />
+                </div>
+
+                <div class="input-container description">
+                    <label for="description" class="form-content">Descrição:</label>
+                   <div class="content-textarea"> <textarea name="description"></textarea> </div>
+                </div>
+                
+                <div class="input-container tag">
+                    <label class="form-content">Tags:</label>
+>>>>>>> e25e305d305276ff6dc6283ffaad41796290e581
                     <div id="tag-labels">
                         {
                             tattoo.tags.map(tag => {
