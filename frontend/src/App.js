@@ -11,7 +11,7 @@ import SignupClient from './pages/SignupClient';
 import SignupTattoo from './pages/SignupTattoo';
 import EditTattoo from './pages/EditTattoo';
 
-import "./styles/Root.css"
+import "./styles/Global.css"
 
 function App() {
     return (
