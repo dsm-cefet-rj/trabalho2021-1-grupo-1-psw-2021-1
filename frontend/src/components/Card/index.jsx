@@ -10,7 +10,7 @@ export default function Card(props) {
                 <a href={props.link}>
                     Feita por: @{props.login}
                 </a>
-                <p>{props.preco}</p>
+                <p>{"R$ " + props.preco.toString()}</p>
                 <button className="btn-salvar">Salvar</button>
             </div>
         </article>
