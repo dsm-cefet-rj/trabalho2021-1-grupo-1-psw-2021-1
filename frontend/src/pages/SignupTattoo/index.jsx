@@ -11,15 +11,15 @@ export default function SignUpTattoo() {
         preco: 0,
         name: "",
         description: "",
-        imge: "",
-        user_id:params.id_tatuador
+        image: "",
+        user_id: params.id_tatuador
     }
     let [tattoo, setTattoo] = useState(inicialValues);
     useEffect(async () => {
     }, []);
 
     function onChange(event) {
-        const {name, value, type} = event.target
+        const {name, value, type} = event.target;
         const label = event.target.parentNode.childNodes[0].textContent;
         if (name === "title") {
             setTattoo({ ...tattoo, name: value })

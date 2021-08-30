@@ -23,7 +23,7 @@ export default function EditTattoo() {
     }, []);
 
    function onChange(event) {
-       const {name,value,label} = event.target
+       const {name, value, label} = event.target
        if (name === "title"){
         setTattoo({...tattoo, name:value})  
        }
