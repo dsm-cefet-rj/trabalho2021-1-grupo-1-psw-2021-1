@@ -29,6 +29,7 @@
     font-size: 1rem;
     margin-bottom: 1%;
     align-self: center;
+    cursor: pointer;
 }
 
 .art-info{
@@ -73,10 +74,6 @@
         width: 30%;
         height: 30px;
     }
-
-    .art-info{
-       margin-top: 11%;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -97,6 +94,6 @@
         margin-bottom: 8px;
     }
     .art-info{
-        margin-top: -11.4vh;
+        margin-top: -15vh;
      }
 }
