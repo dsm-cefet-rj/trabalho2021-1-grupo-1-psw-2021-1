@@ -46,7 +46,7 @@ header {
     display: inline-block;
 }
 
-@media (min-width: 600px) and (max-width: 1280px) {
+@media (min-width: 600px) and (max-width: 720px) {
     #search-container {
         height: 5vh;
     }
@@ -55,9 +55,6 @@ header {
         width: 15%;
         background: transparent;
         border: transparent;
-    }
-    #profile-settings {
-        display: none;
     }
     #feed-container {
         width: 100%;
@@ -76,14 +73,8 @@ header {
         background: transparent;
         border: transparent;
     }
-    #profile-settings {
-        display: none;
-    }
     #feed-container {
         width: 100%;
         margin-top: 1rem;
-    }
-    #ul {
-        display: none;
     }
 }
