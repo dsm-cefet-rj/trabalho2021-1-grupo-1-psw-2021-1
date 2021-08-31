@@ -33,10 +33,10 @@ export default function ClientProfile() {
                     <button>Minhas tattos</button>
                     <button>Tatuadores</button>
                 </div>
-                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
-                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
-                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
-                <Card image="./tattoo exemplo.jpg" preco="R$ 100,00" />
+                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
+                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
+                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
+                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
             </section>
         </main>
 

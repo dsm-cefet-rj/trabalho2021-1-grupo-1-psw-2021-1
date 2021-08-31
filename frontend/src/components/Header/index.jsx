@@ -9,7 +9,7 @@ export default function Header() {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/me">me</Link>
+                    <Link to="/me">Me</Link>
                 </li>
                 <li>
                     <Link to="/tatuadorId"> Seguindo </Link>
