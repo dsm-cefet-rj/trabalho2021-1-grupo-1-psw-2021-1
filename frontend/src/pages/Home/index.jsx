@@ -53,7 +53,7 @@ export default function Home() {
             </header>
             <section>
                 <div id="search-container">
-                    <input type="search" placeholder="Encontre o que procura" />
+                    <input type="search" placeholder="Encontre o que procura" id="search-input" />
                 </div>
                 <div id="feed-container">
                     {
