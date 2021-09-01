@@ -96,10 +96,10 @@ export default function SignUpTattoo() {
 
                 <div id="button-container">
                     <button type="text">
-                        <a href="Perfil_tatuador.html">VOLTAR</a>
+                        <Link href="/profile/3">VOLTAR</Link>
                     </button>
                     <button type="submit" class="submit" onClick={onSubmit}>
-                        <a href="Perfil_tatuador.html">CADASTRAR</a>
+                        <Link href="/profile/3">CADASTRAR</Link>
                     </button>
                 </div>
 

@@ -13,7 +13,7 @@ function Card(props) {
         <article className="cards">
             <img src={props.image} alt="Imagem da tatuagem" />
             <div className="art-info">
-                <h6>Nome da tatuagem e descrição</h6>
+                <h6>{props.name}, {props.disc}</h6>
                 <a href={props.link}>
                     Feita por: @{props.login}
                 </a> 
