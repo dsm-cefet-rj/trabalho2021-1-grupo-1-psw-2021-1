@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-function Cart({tamanho}) {
+const Cart = ({tamanho}) => {
     return(
-        <p>{}</p>
+        <p>{tamanho}</p>
     )
 }
 
 export default connect(state => ({
-    tamanho: state.lenght
+    tamanho: state.length
 }))(Cart)
