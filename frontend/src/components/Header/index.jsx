@@ -1,5 +1,8 @@
-import "../../styles/Header.css";
 import { Link } from "react-router-dom";
+import Cart from '../Cart';
+
+
+import "../../styles/Header.css";
 
 export default function Header() {
 
@@ -34,8 +37,12 @@ export default function Header() {
                     <li>
                         <Link to="#"> Para Você </Link>
                     </li>
+                    <li>
+                        <Cart></Cart>
+                    </li>
                 </ul>
             </nav>
         </header>
     )
 }
+

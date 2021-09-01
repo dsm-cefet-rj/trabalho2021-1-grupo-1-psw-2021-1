@@ -59,7 +59,7 @@ export default function Home() {
                     {
                         tattoos.map(tattoo => {
                             return (
-                                <Card image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name } })} />
+                                <Card  key={tattoo.id} image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name } })} />
                             )
                         })
                     }
