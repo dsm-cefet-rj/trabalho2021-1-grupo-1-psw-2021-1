@@ -39,8 +39,9 @@ export default function SignUpClient() {
             alert("Usuário cadastrado com sucesso")
         }
         else{
-            const validate = userSchema.validate(user)
-            setError(validate);
+            userSchema.validate(user).catch(function (err) {
+                alert(err)
+              });
         }
     }
         return (
