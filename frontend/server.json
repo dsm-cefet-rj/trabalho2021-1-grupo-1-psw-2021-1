@@ -34,6 +34,14 @@
       "id": 6,
       "name": "teste6",
       "senha": "senha123"
+    },
+    {
+      "name": "Natan Steinbruch",
+      "username": "NatanStein",
+      "senha": "12345678",
+      "confirm_senha": "12345678",
+      "email": "natsteinbruch@gmail.com",
+      "id": 7
     }
   ],
   "tattoos": [
@@ -312,6 +320,54 @@
       "preco": 500,
       "user_id": 5,
       "name": "A MAIS BRABA"
+    },
+    {
+      "tags": [],
+      "preco": "123",
+      "name": "a",
+      "description": "a",
+      "image": "",
+      "user_id": "1",
+      "id": 23
+    },
+    {
+      "tags": [],
+      "preco": "123",
+      "name": "a",
+      "description": "a",
+      "image": "",
+      "user_id": "1",
+      "id": 24
+    },
+    {
+      "tags": [],
+      "preco": "200",
+      "name": "A mais braba",
+      "description": "essa tatuagem é braba",
+      "image": "",
+      "user_id": "1",
+      "id": 25
+    },
+    {
+      "tags": [],
+      "preco": "300",
+      "name": "A mais braba",
+      "description": "essa tatuagem é braba",
+      "image": "",
+      "user_id": "1",
+      "id": 26
+    },
+    {
+      "tags": [
+        "Colorido",
+        "Geek"
+      ],
+      "preco": "400",
+      "name": "Martelo do Thor",
+      "description": "Essa tatuagem é o martelo do Thor colorido",
+      "image": "",
+      "user_id": "1",
+      "id": 27
     }
   ]
 }

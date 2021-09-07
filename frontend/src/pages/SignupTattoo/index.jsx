@@ -4,6 +4,8 @@ import { useParams, Link } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
+import { tattooSchema } from "../../schemas/tattooSchema.js";
+
 export default function SignUpTattoo() {
     const params = useParams();
     const inicialValues = {
@@ -18,6 +20,12 @@ export default function SignUpTattoo() {
     useEffect(async () => {
     }, []);
 
+    let [errors, setError] = useState({
+        name: "",
+        description: "",
+        preco:""
+    });
+    
     function onChange(event) {
         const {name, value, type} = event.target;
         const label = event.target.parentNode.childNodes[0].textContent;
@@ -34,14 +42,52 @@ export default function SignUpTattoo() {
             setTattoo({ ...tattoo, description: value })
         }
         else if (type === "checkbox"){
-            tattoo.tags.push(label)
-            setTattoo({ ...tattoo, tags: tattoo.tags})
+            const idx = tattoo.tags.indexOf(label)
+            if (idx == -1)
+            {
+                tattoo.tags.push(label)
+                setTattoo({ ...tattoo, tags: tattoo.tags})
+            }
+            else{
+                tattoo.tags.pop(idx)
+                setTattoo({ ...tattoo, tags: tattoo.tags})
+            }
+
         }
     };
 
-    function onSubmit(event) {
+    async function onSubmit(event) {
         event.preventDefault();
-        api.post(`/tattoos/`, tattoo);
+        const valid_bool = await tattooSchema.isValid(tattoo)
+        if(valid_bool)
+        {
+            api.post(`/tattoos/`, tattoo);
+            alert("Tatuagem cadastrada com sucesso")
+        }
+        else
+        {
+            tattooSchema.validate(tattoo, {abortEarly: false }).catch(function (err) {
+                let name, description,preco = ""
+                err.inner.forEach(e => {
+                    let {path, message} = e;
+                    console.log(path,message)
+                    if ( path === "name") {
+                        name = message
+                    }
+                    else if (path === "description") {
+                        description = message
+                    }
+                    else if (path === "preco") {
+                        preco = message
+                    }
+                })
+                setError({
+                    name,
+                    description,
+                    preco,
+                })
+            })
+        }
     }
 
     return (
@@ -49,6 +95,7 @@ export default function SignUpTattoo() {
             <form action="#" method="POST" id="form-container">
                 <div class="title">
                     <input type="text" name="title" placeholder="Nome Tatuagem" onChange={onChange}/>
+                    <p className="error"> {errors.name} </p>
                 </div>
 
                 <div class="input-container image">
@@ -59,6 +106,7 @@ export default function SignUpTattoo() {
                 <div class="input-container description">
                     <label for="description" class="form-content">Descrição:</label>
                     <div class="content-textarea"> <textarea name="description" placeholder="Descrição da tatuagem" onChange={onChange}></textarea> </div>
+                    <p className="error"> {errors.description} </p>
                 </div>
 
                 <div class="input-container tag">
@@ -92,14 +140,15 @@ export default function SignUpTattoo() {
                 <div class="input-container price">
                     <label for="price">R$</label>
                     <input type="number" name="price" onChange={onChange}/>
+                    <p className="error"> {errors.preco} </p>
                 </div>
 
                 <div id="button-container">
                     <button type="text">
-                        <Link href="/profile/3">VOLTAR</Link>
+                        <Link href={"/profile/"+tattoo.user_id}>VOLTAR</Link>
                     </button>
                     <button type="submit" class="submit" onClick={onSubmit}>
-                        <Link href="/profile/3">CADASTRAR</Link>
+                        <Link href={"/profile/"+tattoo.user_id}>CADASTRAR</Link>
                     </button>
                 </div>
 

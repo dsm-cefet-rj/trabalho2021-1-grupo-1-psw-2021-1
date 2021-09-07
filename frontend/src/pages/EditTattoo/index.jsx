@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
+import { tattooSchema } from "../../schemas/tattooSchema.js";
 
 import "../../styles/EditTattoo.css";
 
@@ -18,6 +19,13 @@ export default function EditTattoo() {
     }
 
     let [tattoo, setTattoo] = useState(inicialValues);
+    console.log(tattoo)
+    let [errors, setError] = useState({
+        name: "",
+        description: "",
+        preco:""
+    });
+
     const params = useParams();
 
     useEffect(async () => {
@@ -26,7 +34,7 @@ export default function EditTattoo() {
     }, []);
 
     function onChange(event) {
-        const { name, value, label } = event.target
+        const { name, value,type, label } = event.target
         if (name === "title") {
             setTattoo({ ...tattoo, name: value })
         }
@@ -39,13 +47,56 @@ export default function EditTattoo() {
         else if (name === "description") {
             setTattoo({ ...tattoo, description: value })
         }
+        else if (type === "checkbox")
+        {
+            console.log(event.target)
+            const idx = tattoo.tags.indexOf(label)
+            if (idx == -1)
+            {
+                tattoo.tags.push(label)
+                setTattoo({ ...tattoo, tags: tattoo.tags})
+            }
+            else{
+                tattoo.tags.pop(idx)
+                setTattoo({ ...tattoo, tags: tattoo.tags})
+            }
+        }        
     };
 
-    function onSubmit(event) {
-        event.preventDefault();
-        api.put(`/tattoos/${params.id_tatuagem}`, tattoo);
-    }
 
+    async function onSubmit(event) {
+        event.preventDefault();
+        const valid_bool = await tattooSchema.isValid(tattoo)
+        if(valid_bool)
+        {
+            api.put(`/tattoos/${params.id_tatuagem}`, tattoo);
+            alert("Tatuagem atualizada com sucesso")
+        }
+        else
+        {
+            tattooSchema.validate(tattoo, {abortEarly: false }).catch(function (err) {
+                let name, description,preco = ""
+                err.inner.forEach(e => {
+                    let {path, message} = e;
+                    console.log(path,message)
+                    if ( path === "name") {
+                        name = message
+                    }
+                    else if (path === "description") {
+                        description = message
+                    }
+                    else if (path === "preco") {
+                        preco = "O valor da tatuagem é obrigatório"
+                    }
+                })
+                setError({
+                    name,
+                    description,
+                    preco,
+                })
+            })
+        }
+    }
     function addTag(){
         
     }
@@ -55,8 +106,8 @@ export default function EditTattoo() {
             <form action="#" method="POST" id="form-container">
                 <div className="title">
                     <input type="text" name="title" value={tattoo.name} onChange={onChange} />
+                    <p className="error"> {errors.name} </p>
                 </div>
-
                 <div className="input-container image">
                     <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" onChange={onChange} />
                     <input type="file" name="image" />
@@ -65,19 +116,10 @@ export default function EditTattoo() {
                 <div className="input-container description">
                     <label for="description" className="form-content">Descrição:</label>
                     <div className="content-textarea"> <textarea name="description" onChange={onChange} value={tattoo.description}></textarea></div>
+                    <p className="error"> {errors.description} </p>
                 </div>
 
                 <div className="input-container tag">
-                    <label className="form-content">Tags:</label>
-                    <div class="input-container image">
-                        <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" />
-                        <input type="file" />
-                    </div>
-
-                    <div class="input-container description">
-                        <label for="description" class="form-content">Descrição:</label>
-                        <div class="content-textarea"> <textarea name="description"></textarea> </div>
-                    </div>
 
                     <div class="input-container tag">
                         <label class="form-content">Tags:</label>
@@ -94,13 +136,14 @@ export default function EditTattoo() {
                     <div className="input-container price">
                         <label for="price">R$</label>
                         <input type="number" name="price" value={tattoo.preco} onChange={onChange} />
+                        <p className="error"> {errors.preco} </p>
                     </div>
 
                     <div id="button-container">
                         <button type="submit">
                             <Link to={"/profile/" + tattoo.user_id}>VOLTAR</Link>
                         </button>
-                        <button type="submit" className="submit" onClick={onSubmit}><Link to={"/profile/" + tattoo.user_id}>SALVAR</Link></button>
+                        <button type="submit" className="submit" onClick={onSubmit}><Link href={"/profile/" + tattoo.user_id}>SALVAR</Link></button>
                     </div>
                 </div>
             </form>

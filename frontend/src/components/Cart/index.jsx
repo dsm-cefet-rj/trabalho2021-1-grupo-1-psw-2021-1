@@ -1,11 +1,5 @@
-import { connect } from 'react-redux';
-
-const Cart = ({tamanho}) => {
+export default function Cart() {
     return(
-        <p>{tamanho}</p>
+        <h3>0</h3>
     )
 }
-
-export default connect(state => ({
-    tamanho: state.length
-}))(Cart)

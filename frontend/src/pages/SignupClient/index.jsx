@@ -10,11 +10,18 @@ export default function SignUpClient() {
 
     let [user, setUser] = useState({
         name: "",
+        username: "",
         senha: "",
         confirm_senha: "",
         email: ""
     });
-    let [error, setError] = useState([]);
+    let [errors, setError] = useState({
+        name: "",
+        username: "",
+        senha: "",
+        confirm_senha: "",
+        email: ""
+    });
 
     function onChange(event) {
         const { name, value } = event.target;
@@ -24,6 +31,9 @@ export default function SignUpClient() {
         else if (name === "password") {
             setUser({ ...user, senha: value })
         }
+        else if (name === "username") {
+            setUser({ ...user, username: value })
+        }
         else if (name === "confirm_password") {
             setUser({ ...user, confirm_senha: value })
         }
@@ -31,6 +41,7 @@ export default function SignUpClient() {
             setUser({ ...user, email: value })
         }
     };
+
     async function onSubmit(event) {
         event.preventDefault();
         const valid_bool = await userSchema.isValid(user)
@@ -38,49 +49,79 @@ export default function SignUpClient() {
             await api.post(`/users/`, user);
             alert("Usuário cadastrado com sucesso")
         }
-        else{
-            userSchema.validate(user).catch(function (err) {
-                alert(err)
-              });
-        }
+        else {
+            userSchema.validate(user, {abortEarly: false }).catch(function (err) {
+                let name, username, confirm_senha, senha, email;
+                err.inner.forEach(e => {
+                    let {path, message} = e;
+                    if ( path === "name") {
+                        name = message
+                    }
+                    else if (path === "senha") {
+                        senha = message
+                    }
+                    else if (path === "username") {
+                        username =  message 
+                    }
+                    else if (path === "confirm_senha") {
+                        confirm_senha = message
+                    }
+                    else if (path === "email") {
+                        email = message
+                    }
+                })
+                setError({
+                    name,
+                    username,
+                    senha,
+                    confirm_senha,
+                    email
+                })
+            })
     }
-        return (
-            < div className="main-container" >
-                <form action="#" id="form-container" method="POST" >
-                    <legend>Cadastro</legend>
+}
+return (
+    < div className="main-container" >
+        <form action="#" id="form-container" method="POST" >
+            <legend>Cadastro</legend>
 
-                    <label for="name" class="form-content">Nome completo</label>
-                    <input type="text" name="name" class="form-content" onChange={onChange} />
+            <label for="name" className="form-content">Nome completo</label>
+            <input type="text" name="name" className="form-content" onChange={onChange} />
+            <p className="error"> {errors.name} </p>
 
-                    <label for="username" class="form-content">Nome de usuário</label>
-                    <input type="text" name="username" class="form-content" onChange={onChange} />
+            <label for="username" className="form-content">Nome de usuário</label>
+            <input type="text" name="username" className="form-content" onChange={onChange} />
+            <p className="error"> {errors.username} </p>
 
-                    <label class="form-content">E-mail</label>
-                    <input type="email" class="form-content" name="email" onChange={onChange} />
+            <label className="form-content">E-mail</label>
+            <input type="email" className="form-content" name="email" onChange={onChange} />
+            <p className="error"> {errors.email} </p>
 
-                    <label class="form-content">Senha</label>
-                    <input type="password" class="form-content" name="password" onChange={onChange} />
+            <label className="form-content">Senha</label>
+            <input type="password" className="form-content" name="password" onChange={onChange} />
+            <p className="error"> {errors.senha} </p>
 
-                    <label class="form-content">Confirme sua senha</label>
-                    <input type="password" class="form-content" name="confirm_password" onChange={onChange} />
+            <label className="form-content">Confirme sua senha</label>
+            <input type="password" className="form-content" name="confirm_password" onChange={onChange} />
+            <p className="error"> {errors.confirm_senha} </p>
 
 
-                    <div class="checkbox-content">
-                        <label>Interesses</label>
-                        <label>Tribais</label>
-                        <input type="checkbox" />
-                        <label>New school</label>
-                        <input type="checkbox" />
-                        <label>Minimalista</label>
-                        <input type="checkbox" />
-                        <label>Formas geométricas</label>
-                        <input type="checkbox" />
-                        <label>Old school</label>
-                        <input type="checkbox" onChange={onChange} />
-                        <button>Adicionar outro</button>
-                    </div>
-                <button type="submit" id="submit" onClick={onSubmit}>Cadastrar</button>
-                </form >
-            </div >
-        )
-    }
+            <div className="checkbox-content">
+                <label>Interesses</label>
+                <label>Tribais</label>
+                <input type="checkbox" />
+                <label>New school</label>
+                <input type="checkbox" />
+                <label>Minimalista</label>
+                <input type="checkbox" />
+                <label>Formas geométricas</label>
+                <input type="checkbox" />
+                <label>Old school</label>
+                <input type="checkbox" onChange={onChange} />
+                <button>Adicionar outro</button>
+            </div>
+            <button type="submit" id="submit" onClick={onSubmit}> <Link href="/home">CADASTRAR</Link></button>
+        </form >
+    </div >
+)
+}

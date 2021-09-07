@@ -1,13 +1,6 @@
-import { connect, useDispatch } from 'react-redux';
-
-import { addToCart } from '../../actions';
-
 import "../../styles/Card.css";
 
-
-function Card(props) {
-
-    const dispatch = useDispatch();
+export default function Card(props) {
 
     return (
         <article className="cards">
@@ -18,10 +11,8 @@ function Card(props) {
                     Feita por: @{props.login}
                 </a> 
                 <p>{`R$ ${props.preco.toString()}`}</p>
-                <button className="btn-salvar" onClick={() => dispatch(addToCart(props))}>Salvar</button>
+                <button className="btn-salvar">Salvar</button>
             </div>
         </article>
     )
 }
-
-export default connect(state => ({itens: state}))(Card);
