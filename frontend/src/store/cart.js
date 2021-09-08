@@ -1,4 +1,4 @@
-import { createEntityAdapter, createSlice, configureStore } from '@reduxjs/toolkit';
+import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 
 const cartAdapter = createEntityAdapter({
     selectId: (tattoo) => tattoo.id, 

@@ -1,14 +1,15 @@
-import { useDispatch } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
 import cartSlice from "../../store/cart";
 
 import "../../styles/Card.css";
 
-export default function Card(props) {
+function Card(props) {
+    const dispatch = useDispatch()
 
-    function buyTattoo() {
-        const dispatch = useDispatch()
-        dispatch(cartSlice.actions.tattooAdd({}))
+    const buyTattoo = (props) => {
+        dispatch(cartSlice.actions.tattooAdd({id: props.id}))
+        console.log(props)
     }
 
     return (
@@ -26,3 +27,5 @@ export default function Card(props) {
         </article>
     )
 }
+
+export default Card;
