@@ -1,6 +1,6 @@
 import "../../styles/SignupTattoo.css";
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useHistory } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
@@ -8,6 +8,8 @@ import { tattooSchema } from "../../schemas/tattooSchema.js";
 
 export default function SignUpTattoo() {
     const params = useParams();
+    const history = useHistory();
+
     const inicialValues = {
         tags: [],
         preco: 0,
@@ -63,6 +65,7 @@ export default function SignUpTattoo() {
         {
             api.post(`/tattoos/`, tattoo);
             alert("Tatuagem cadastrada com sucesso")
+            history.push("/profile/"+tattoo.user_id)
         }
         else
         {
@@ -88,6 +91,10 @@ export default function SignUpTattoo() {
                 })
             })
         }
+    }
+
+    function goBack(){
+        history.push("/profile/"+tattoo.user_id)
     }
 
     return (
@@ -144,7 +151,7 @@ export default function SignUpTattoo() {
                 </div>
 
                 <div id="button-container">
-                    <button type="text">
+                    <button type="text" onClick={goBack}>
                         <Link href={"/profile/"+tattoo.user_id}>VOLTAR</Link>
                     </button>
                     <button type="submit" class="submit" onClick={onSubmit}>

@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-
+import { useParams, Link, useHistory} from 'react-router-dom';
 import { api } from '../../services/api';
 
 import { tattooSchema } from "../../schemas/tattooSchema.js";
 
 import "../../styles/EditTattoo.css";
 
-
 export default function EditTattoo() {
+
+    const history = useHistory()
 
     const inicialValues = {
         tags: [],
         preco: 0,
         name: "",
         description: "",
-        imge: ""
+        imge: "",
+        user_id: null
     }
 
     let [tattoo, setTattoo] = useState(inicialValues);
@@ -70,7 +71,8 @@ export default function EditTattoo() {
         if(valid_bool)
         {
             api.put(`/tattoos/${params.id_tatuagem}`, tattoo);
-            alert("Tatuagem atualizada com sucesso")
+            alert("Tatuagem atualizada com sucesso");
+            history.push("/profile/" + tattoo.user_id)
         }
         else
         {

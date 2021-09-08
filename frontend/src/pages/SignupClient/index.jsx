@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { api } from "../../services/api.js";
 
 import { userSchema } from "../../schemas/userSchema.js";
@@ -7,6 +7,8 @@ import { userSchema } from "../../schemas/userSchema.js";
 import "../../styles/SignupClient.css";
 
 export default function SignUpClient() {
+
+    const history = useHistory();
 
     let [user, setUser] = useState({
         name: "",
@@ -48,6 +50,7 @@ export default function SignUpClient() {
         if (valid_bool) {
             await api.post(`/users/`, user);
             alert("Usuário cadastrado com sucesso")
+            history.push("/login/")
         }
         else {
             userSchema.validate(user, {abortEarly: false }).catch(function (err) {

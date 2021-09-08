@@ -25,7 +25,7 @@ function App() {
           <Route path="/me/paymentId/confirm">
             <PaymentConfirm />
           </Route>
-          <Route path="/me/paymentId">
+          <Route path="/:id_tattoo/payment">
             <Payment />
           </Route>
           <Route

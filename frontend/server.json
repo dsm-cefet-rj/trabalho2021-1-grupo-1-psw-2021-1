@@ -49,6 +49,14 @@
       "confirm_senha": "12345678",
       "email": "natsteinbruch@gmail.com",
       "id": 7
+    },
+    {
+      "name": "Natan Steinbruch",
+      "username": "NatanStein",
+      "senha": "12345678",
+      "confirm_senha": "12345678",
+      "email": "natsteinbruch@gmail.com",
+      "id": 8
     }
   ],
   "agendamentos": [
@@ -75,6 +83,24 @@
       "data": "29/10/2021",
       "horario": "09:00:00",
       "id": 5
+    },
+    {
+      "id_compra": "0",
+      "data": "27/10/2021",
+      "horario": "09:00:00",
+      "id": 6
+    },
+    {
+      "id_compra": "0",
+      "data": "27/10/2021",
+      "horario": "08:00:00",
+      "id": 7
+    },
+    {
+      "id_compra": "0",
+      "data": "27/10/2021",
+      "horario": "09:00:00",
+      "id": 8
     }
   ],
   "tattoos": [
@@ -86,7 +112,7 @@
       ],
       "description": "essa tatuagem é maneiraaaa",
       "image": "/assets/images/exemplo1.jpg",
-      "preco": "250",
+      "preco": "350",
       "user_id": 1,
       "name": "A MAIS BRABA"
     },
@@ -357,7 +383,7 @@
     {
       "tags": [],
       "preco": "123",
-      "name": "a",
+      "name": "A MAIS BRABA",
       "description": "a",
       "image": "",
       "user_id": "1",
@@ -374,7 +400,7 @@
     },
     {
       "tags": [],
-      "preco": "200",
+      "preco": "400",
       "name": "A mais braba",
       "description": "essa tatuagem é braba",
       "image": "",
@@ -401,6 +427,18 @@
       "image": "",
       "user_id": "1",
       "id": 27
+    },
+    {
+      "tags": [
+        "Old School",
+        "Colorido"
+      ],
+      "preco": "200",
+      "name": "A MAIS BRABA123",
+      "description": "essa tatuagem é muito linda",
+      "image": "",
+      "user_id": "1",
+      "id": 28
     }
   ],
   "buy": [

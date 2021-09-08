@@ -1,12 +1,14 @@
 import '../../styles/Login.css';
 import {useState} from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
 import { loginSchema } from "../../schemas/loginSchema.js";
 
 export default function Login() {
+
+    const history = useHistory()
 
     let [user,setUser] = useState({email:"",senha:""})
  
@@ -23,11 +25,7 @@ export default function Login() {
         const valid_bool = await loginSchema.isValid(user)
         if(valid_bool)
         {
-            const {users} = await api.get("/users")
-            users.forEach(u => {if(u.email == user.email){find = true}})
-            if(find == false){
-                setError({email:"Email/Nome de usuário não encontrado",senha:errors.senha})
-            }
+            history.push("/me/")
         }
         else
         {
@@ -53,7 +51,6 @@ export default function Login() {
     function onChange(event)
     {
         const {name, value} = event.target;
-        console.log(name,value)
         if (name === "username") {
             setUser({ ...user, email: value })
         }
@@ -70,12 +67,12 @@ export default function Login() {
 
                 <h1>Login</h1>
 
-                <form id="form-login" action="" method="POST">
-                    <input type="text" name="username" placeholder="Nome de usuário" onChange={onChange}></input>
+                <form id="form-login" action="#" method="POST">
+                    <input type="text" name="username" placeholder="Email" onChange={onChange}></input>
                     <p className="error"> {errors.email} </p>
                     <input type="password" name="password" placeholder="Senha" onChange={onChange}></input>
                     <p className="error"> {errors.senha} </p>
-                    <button type="submit" id="login-button" onSubmit={onSubmit}><Link to="/me">Entrar</Link></button>
+                    <button type="submit" id="login-button" onClick={onSubmit}><Link href="/me">Entrar</Link></button>
                 </form>
 
                 <a id="forgot-password" href="#">Esqueceu sua senha?</a>

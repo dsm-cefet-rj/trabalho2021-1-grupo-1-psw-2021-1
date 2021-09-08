@@ -1,6 +1,6 @@
 import "../../styles/Scheduling.css";
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useHistory} from 'react-router-dom';
 
 import { api } from '../../services/api';
 
@@ -9,6 +9,8 @@ import { agendamentoSchema } from "../../schemas/agendamentoSchema.js";
 export default function Scheduling() {
   
     const params = useParams();
+
+    const history = useHistory()
 
     let [agend, setAgend] = useState({
         id_compra: null,
@@ -41,6 +43,7 @@ export default function Scheduling() {
             }
             api.post(`/agendamentos/`, agend);
             alert("Agendamento concluído com sucesso")
+            history.push("/me/")
         }
         else
         {
@@ -73,6 +76,10 @@ export default function Scheduling() {
         else if (name === "horario") {
             setAgend({ ...agend, horario: value })
         }
+    }
+
+    function goBack(event){
+        history.push("/me/")
     }
 
     return (
@@ -108,7 +115,7 @@ export default function Scheduling() {
                 </div>
 
                 <div id="button-container">
-                    <button type="text">
+                    <button type="text" onClick={goBack}>
                         <Link href="/me">Voltar</Link>
                     </button>
                     <button type="submit" class="submit" onClick={onSubmit}>

@@ -2,9 +2,14 @@ import { connect, useDispatch } from "react-redux";
 
 import cartSlice from "../../store/cart";
 
+import { Link, useHistory } from 'react-router-dom';
+
 import "../../styles/Card.css";
 
 function Card(props) {
+
+    const history = useHistory()
+
     const dispatch = useDispatch()
 
     const buyTattoo = (props) => {
@@ -22,7 +27,7 @@ function Card(props) {
                 </a> 
                 <p>{`R$ ${props.preco.toString()}`}</p>
                 <button className="btn-salvar">Salvar</button>
-                <button className="btn-comprar" onClick={buyTattoo}>Comprar</button>
+                <button className="btn-comprar" ><Link to={"/" + props.id + "/payment"}>Comprar</Link></button>
             </div>
         </article>
     )
