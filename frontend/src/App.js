@@ -10,8 +10,8 @@ import ProfessionalProfile from './pages/ProfessionalProfile';
 import SignupClient from './pages/SignupClient';
 import SignupTattoo from './pages/SignupTattoo';
 import EditTattoo from './pages/EditTattoo';
+import Scheduling from './pages/Scheduling';
 import Login from './pages/Login';
-
 import "./styles/Global.css"
 
 function App() {
@@ -35,6 +35,9 @@ function App() {
                 </Route>
                 <Route path="/signUp">
                     <SignupClient />
+                </Route>
+                <Route path="/scheduling">
+                    <Scheduling />
                 </Route>
                 <Route path="/me">
                     <ClientProfile />

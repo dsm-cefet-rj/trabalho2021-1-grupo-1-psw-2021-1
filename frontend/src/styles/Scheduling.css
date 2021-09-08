@@ -1,0 +1,47 @@
+.main-container{
+    margin: 5% auto;
+    max-width: 90%;
+}
+
+legend{
+    font-size: 1.3rem;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 1rem;
+    margin: auto;
+    align-items: center;
+}
+
+.form-content{
+    width: 80%;
+    margin-left: -100px; 
+}
+
+.tatuador select{
+    width: 100px;
+}
+
+h2{
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 1200px){
+    .form-content{
+        width: 60%;
+    }
+    #form-container{
+        margin-top: 3%;
+    }
+    input.form-content{
+        height: 3rem;
+        border-radius: 0.5rem;
+        margin-top: 1%;
+    }
+}
