@@ -3,36 +3,43 @@
     {
       "id": 0,
       "name": "teste0",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
       "id": 1,
       "name": "teste1",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
       "id": 2,
       "name": "teste2",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
       "id": 3,
       "name": "teste3",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
       "id": 4,
       "name": "teste4",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
       "id": 5,
       "name": "teste5",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
       "id": 6,
       "name": "teste6",
+      "email": "exemplo@gmail.com",
       "senha": "senha123"
     },
     {
@@ -42,6 +49,20 @@
       "confirm_senha": "12345678",
       "email": "natsteinbruch@gmail.com",
       "id": 7
+    }
+  ],
+  "agendamentos": [
+    {
+      "id_compra": "1",
+      "data": "28/10/202",
+      "horario": "08:00:00",
+      "id": 2
+    },
+    {
+      "id_compra": "0",
+      "data": "27/10/2021",
+      "horario": "10:00:00",
+      "id": 3
     }
   ],
   "tattoos": [
@@ -368,6 +389,26 @@
       "image": "",
       "user_id": "1",
       "id": 27
+    }
+  ],
+  "buy": [
+    {
+      "id": 0,
+      "user_id": "0",
+      "tattoo_id": 1,
+      "agendamento_id": null
+    },
+    {
+      "id": 1,
+      "user_id": "0",
+      "tattoo_id": 2,
+      "agendamento_id": null
+    },
+    {
+      "id": 2,
+      "user_id": "0",
+      "tattoo_id": 3,
+      "agendamento_id": null
     }
   ]
 }

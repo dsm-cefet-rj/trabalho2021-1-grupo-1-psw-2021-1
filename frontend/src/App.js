@@ -36,7 +36,7 @@ function App() {
                 <Route path="/signUp">
                     <SignupClient />
                 </Route>
-                <Route path="/scheduling">
+                <Route path="/:id_compra/scheduling">
                     <Scheduling />
                 </Route>
                 <Route path="/me">
