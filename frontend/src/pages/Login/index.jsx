@@ -75,7 +75,7 @@ export default function Login() {
                     <p className="error"> {errors.email} </p>
                     <input type="password" name="password" placeholder="Senha" onChange={onChange}></input>
                     <p className="error"> {errors.senha} </p>
-                    <button type="submit" id="login-button" onSubmit={onSubmit}><Link href={"/home"}>Entrar</Link></button>
+                    <button type="submit" id="login-button" onSubmit={onSubmit}><Link to="/me">Entrar</Link></button>
                 </form>
 
                 <a id="forgot-password" href="#">Esqueceu sua senha?</a>
