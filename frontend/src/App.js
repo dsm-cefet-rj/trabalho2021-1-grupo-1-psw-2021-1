@@ -10,7 +10,12 @@ import ProfessionalProfile from './pages/ProfessionalProfile';
 import SignupClient from './pages/SignupClient';
 import SignupTattoo from './pages/SignupTattoo';
 import EditTattoo from './pages/EditTattoo';
+<<<<<<< HEAD
 import Scheduling from './pages/Scheduling';
+=======
+import Login from './pages/Login';
+
+>>>>>>> 88f6f5285fbcf0eb8ffa4a30a244621db781c1e3
 import "./styles/Global.css"
 
 function App() {
@@ -40,6 +45,9 @@ function App() {
                 </Route>
                 <Route path="/me">
                     <ClientProfile />
+                </Route>
+                <Route path="/login">
+                    <Login />
                 </Route>
                 <Route path="/">
                     <Home />
