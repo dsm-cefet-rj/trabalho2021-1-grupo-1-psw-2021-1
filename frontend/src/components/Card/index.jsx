@@ -12,6 +12,7 @@ export default function Card(props) {
                 </a> 
                 <p>{`R$ ${props.preco.toString()}`}</p>
                 <button className="btn-salvar">Salvar</button>
+                <button className="btn-comprar">Comprar</button>
             </div>
         </article>
     )
