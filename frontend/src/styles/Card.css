@@ -31,6 +31,18 @@
     align-self: center;
     cursor: pointer;
 }
+.cards .btn-comprar {
+    background-color: black;
+    border: transparent;
+    border-radius: 0.5rem;
+    color: #f2f2f2;
+    width: 20vh;
+    height: 50px;
+    font-size: 1rem;
+    margin-bottom: 5%;
+    align-self: center;
+    cursor: pointer;
+}
 
 .art-info{
     transform: translateY(-335px);
@@ -74,6 +86,10 @@
         width: 30%;
         height: 30px;
     }
+    .cards .btn-comprar {
+        width: 30%;
+        height: 30px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -89,8 +105,13 @@
         overflow: hidden;
     }
     .cards .btn-salvar {
-        width: 30%;
-        height: 30px;
+        width: 35%;
+        height: 35px;
+        margin-bottom: 8px;
+    }
+    .cards .btn-comprar {
+        width: 35%;
+        height: 35px;
         margin-bottom: 8px;
     }
     .art-info{
