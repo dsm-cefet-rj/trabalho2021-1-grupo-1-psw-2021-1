@@ -108,8 +108,9 @@ export default function EditTattoo() {
                     <input type="text" name="title" value={tattoo.name} onChange={onChange} />
                     <p className="error"> {errors.name} </p>
                 </div>
-                <div className="input-container image">
-                    <img src={tattoo.image} alt="Imagem da arte da nova tatuagem" onChange={onChange} />
+
+                <div class = "img-content" className="input-container image">
+                    <img id= "img-input" src={tattoo.image} alt="Imagem da arte da nova tatuagem" onChange={onChange} />
                     <input type="file" name="image" />
                 </div>
 
@@ -133,7 +134,7 @@ export default function EditTattoo() {
                         </div>
                     </div>
 
-                    <div className="input-container price">
+                    <div id="price-container" className="input-container price">
                         <label for="price">R$</label>
                         <input type="number" name="price" value={tattoo.preco} onChange={onChange} />
                         <p className="error"> {errors.preco} </p>
