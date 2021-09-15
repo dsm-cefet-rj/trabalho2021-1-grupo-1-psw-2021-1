@@ -1,6 +1,3 @@
-const { increment } = require("../service/autoIncrement");
-
-
 let clients = []
 
 module.exports = class clientController {
@@ -35,7 +32,7 @@ module.exports = class clientController {
         let { name, username, email, password } = req.body;
         if(clients[id] !== undefined){
             clients[id] = {
-                id, 
+                id: parseInt(id),
                 name, 
                 username, 
                 email, 
