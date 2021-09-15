@@ -19,7 +19,7 @@ module.exports = class ProfessionalController {
     }
 
     static update(req, res) {
-        let {id, name, username, email, password}
+        let {id, name, username, email, password} = req.body;
     }
 
 }

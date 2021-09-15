@@ -22,10 +22,9 @@ module.exports = class tattooController {
     }
 
     static update(req, res) {
-        let { tags, preco, name, description, image, user_id } = req.body;
-        let tattoo = tattoos.indexOf(id, 0)
-        if( tattoo > -1 ) {
-            tattoos[tattoo] = {
+        let { id, tags, preco, name, description, image, user_id } = req.body;
+        if(tattoos[id] !== undefined){
+            tattoos[id] = {
                 id: tattoos.length,
                 tags,
                 preco,

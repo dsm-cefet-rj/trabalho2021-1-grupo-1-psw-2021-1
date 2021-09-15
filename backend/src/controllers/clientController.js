@@ -1,10 +1,21 @@
+const { increment } = require("../service/autoIncrement");
+
 
 let clients = []
 
 module.exports = class clientController {
 
     static index(req, res) {    
-        return res.json(clients)
+        return res.status(200).json(clients)
+    }
+
+    static show(req, res){
+        let {id} = req.params;
+        if(clients[id] !== undefined) {
+            return res.status(200).json(clients[id]);
+        } else {
+            return res.status(406).json({"message": "usuário não encontrado"});
+        }
     }
     
     static create(req, res) {
@@ -16,34 +27,38 @@ module.exports = class clientController {
             email, 
             password
         });
-        return res.json(clients)
+        return res.status(200).json(clients)
     }
 
     static update(req, res) {
-        let { id, name, username, email, password } = req.body;
-        let client = Object.values(clients).indexOf(id, 0)
-        if( client > -1 ) {
-            clients[client] = {
+        let { id } = req.params
+        let { name, username, email, password } = req.body;
+        if(clients[id] !== undefined){
+            clients[id] = {
                 id, 
                 name, 
                 username, 
-                email,
+                email, 
                 password
             }
+            return res.status(200).json({"message": "usuário atualizado"});
         } else {
-            return res.status(404).json({"message": "not found"});
+            return res.status(406).json({"message": "usuário não encontrado"});
         }
-        return res.json(client);
     }
 
     static delete(req, res) {
-        let {id} = req.body;
-        let client = clients.indexOf(id, 0)
-        if( client > -1 ) {
-            clients.pop(client)
-            return res.status(201).json({"message": "Deletado com sucesso"});
+        let { id } = req.params;
+        if(clients[id] !== undefined) {
+            let i = 0
+            clients.splice(id, 1)
+            clients.forEach(client => {
+                client.id = i;
+                i++;
+            })
+            return res.status(200).json({"message": "Deletado com sucesso"});
         } else {
-            return res.status(404).json({"message": "not found"});
+            return res.status(406).json({"message": "usuário não deletado"});
         }
     }
 }
