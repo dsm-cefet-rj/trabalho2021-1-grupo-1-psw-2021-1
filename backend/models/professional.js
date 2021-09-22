@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const clientSchema = new Schema({
+const professionalSchema = new Schema({
     name: {
         type: String,
         require: true,
@@ -24,11 +24,6 @@ const clientSchema = new Schema({
         default: Date.now(),
         require: true,
     },
-    updated_at: {
-        type: Date, 
-        default: Date.now(), 
-        require: true,
-    }
 });
 
-module.exports = model('client', clientSchema);
+module.exports = model('professional', professionalSchema);

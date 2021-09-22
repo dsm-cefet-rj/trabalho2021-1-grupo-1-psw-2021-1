@@ -30,6 +30,11 @@ const paymentSchema = new Schema({
         default: Date.now(),
         require: true,
     },
+    updated_at: {
+        type: Date, 
+        default: Date.now(), 
+        require: true,
+    }
 });
 
 module.exports = model('client', paymentSchema);
