@@ -1,67 +1,55 @@
 const { Router } = require('express');
 
+const Tattoo = require("../models/tattoo"); 
+
 const router = Router();
 
-let tattoos = [];
-
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    let tattoos = await Tattoo.find({})
     return res.status(200).json(tattoos);
 });
 
-router.get('/:id', (req, res) => {
-    let { id } = req.params;
-    if (tattoos[id] !== undefined) {
-        return res.status(200).json(tattoos[id]);
+router.get('/:id', async (req, res) => {
+    let { id: _id } = req.params;
+
+    let tattoo = await Tattoo.find({_id});
+
+    if (tattoo !== undefined) {
+        return res.status(200).json(tattoo);
     } else {
         return res.status(406).json({ message: 'tatuagem não encontrada' });
     }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     let { tags, preco, name, description, image, user_id } = req.body;
-    tattoos.push({
-        id: tattoos.length,
-        tags,
-        preco,
-        name,
-        description,
-        image,
-        user_id,
-    });
-    return res.status(200).json(tattoos);
+    try{
+        let tattoo = Tattoo({tags, preco, name, description, image, user_id});
+        await tattoo.save();
+        return res.status(200).json(tattoo);
+    } catch(err) {
+        return res.status(406).json({"message": err.message})
+    }
 });
 
-router.patch('/:id', (req, res) => {
-    let { id } = req.params;
+router.patch('/:id', async (req, res) => {
+    let { id:_id } = req.params;
     let { tags, preco, name, description, image, user_id } = req.body;
-    if (tattoos[id] !== undefined) {
-        tattoos[id] = {
-            id: parseInt(id),
-            tags,
-            preco,
-            name,
-            description,
-            image,
-            user_id,
-        };
+    try {
+        await Tattoo.updateOne({_id}, {tags, preco, name, description, image, user_id});
         return res.status(200).json({ message: 'tatuagem atualizada' });
-    } else {
+    } catch {
         return res.status(406).json({ message: 'tatuagem não encontrada' });
     }
 });
 
-router.delete('/:id', (req, res) => {
-    let { id } = req.params;
-    if (tattoos[id] !== undefined) {
-        let i = 0;
-        tattoos.splice(id, 1);
-        tattoos.forEach((tattoo) => {
-            tattoo.id = i;
-            i++;
-        });
-        return res.status(200).json({ message: 'tatuagem deletada com sucesso' });
-    } else {
-        return res.status(406).json({ message: 'não foi possivel deletar tatuagem' });
+router.delete('/:id', async (req, res) => {
+    let { id: _id } = req.params;
+    try {
+        await Tattoo.remove({_id})
+        return res.status(200).json({message: 'Deletada com sucesso'});
+    } catch {
+        return res.status(406).json({message: 'Tatuagem não deletada'})
     }
 });
 
