@@ -37,4 +37,4 @@ const paymentSchema = new Schema({
     }
 });
 
-module.exports = model('client', paymentSchema);
+module.exports = model('payment', paymentSchema);

@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const mongoose = require('mongoose');
+
+require("dotenv").config();
 
 //rotas
 const clientRouter = require('./routes/client');
@@ -11,7 +14,10 @@ const tattooRouter = require('./routes/tattoo');
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/tatuando", {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(`mongodb+srv://tatuando:${process.env.MONGODB_PASSWORD}@tatuando.yermr.mongodb.net/tatuando?retryWrites=true&w=majority`, {
+    useNewURlParser: true,
+    useUnifiedTopology: true,
+});
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -9,7 +9,9 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
     "express": "~4.16.1",
+    "mongoose": "^6.0.8",
     "morgan": "~1.9.1",
     "prettier": "^2.4.1"
   },
