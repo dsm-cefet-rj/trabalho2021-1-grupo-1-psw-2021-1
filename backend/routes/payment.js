@@ -1,50 +1,50 @@
 const { Router } = require('express');
 
+const Payment = require("../models/payment");
+
 const router = Router();
 
-payments = [];
+router.get('/', async (req, res) => {
+    try{
+        let payments = await Payment.find({});
+        return res.status(200).json(payments);
+    } catch(err){
+        return res.status(406).json({message: err.message});
+    }
 
-router.get('/', (req, res) => {
-    return res.json(payments);
 });
 
-router.get('/:id', (req, res) => {
-    let { id } = req.params;
-    if (payments[id] !== undefined) {
-        return res.status(200).json(payments[id]);
-    } else {
-        return res.status(406).json({ message: 'transação não encontrado' });
+router.get('/:id', async (req, res) => {
+    let { id: _id } = req.params;
+     
+    try{
+        let payment = await Payment.find({_id});
+        return res.status(200).json(payment);
+    } catch(err){
+        return res.status(406).json({message: err.message});
     }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     let { value, name, cpf, num_cartao, validade, preco, cvv, id_compra } = req.body;
-    payments.push({
-        id: payments.length,
-        value,
-        name,
-        cpf,
-        num_cartao,
-        validade,
-        preco,
-        cvv,
-        id_compra,
-    });
-    return res.status(200).json(payments);
+
+    try{
+        let payment = new Payment({value, name, cpf, num_cartao, validade, preco, cvv, id_compra});
+        await payment.save();
+        return res.status(200).json({message: "Pagamento cadastrado"})
+    } catch(err){
+        return res.status(406).json({message: err.message});
+    }
 });
 
-router.delete('/:id', (req, res) => {
-    let { id } = req.params;
-    if (payments[id] !== undefined) {
-        let i = 0;
-        payments.splice(id, 1);
-        payments.forEach((payment) => {
-            payment.id = i;
-            i++;
-        });
-        return res.status(200).json({ message: 'transação deletada com sucesso' });
-    } else {
-        return res.status(406).json({ message: 'transação não deletada' });
+router.delete('/:id', async (req, res) => {
+    let { id: _id } = req.params;
+    
+    try{
+        await Payment.remove({_id});
+        return res.status(200).json({message: 'Deletado com sucesso' });
+    } catch(err){
+        return res.status(406).json({message: err.message});
     }
 });
 
