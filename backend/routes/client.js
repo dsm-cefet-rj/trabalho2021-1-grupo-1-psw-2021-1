@@ -1,5 +1,7 @@
 const { Router } = require('express');
 
+const Client = require("../models/client");
+
 const router = Router();
 
 let clients = [];
@@ -17,15 +19,11 @@ router.get('/:id', (req, res) => {
     }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     let { name, username, email, password } = req.body;
-    clients.push({
-        id: clients.length,
-        name,
-        username,
-        email,
-        password,
-    });
+
+    let user = await new User({name, username, email, password})
+
     return res.status(200).json(clients);
 });
 

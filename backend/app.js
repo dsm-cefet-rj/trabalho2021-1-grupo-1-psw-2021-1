@@ -11,15 +11,17 @@ const tattooRouter = require('./routes/tattoo');
 
 const app = express();
 
+mongoose.connect("mongodb://localhost:27017/tatuando", {useNewUrlParser: true, useUnifiedTopology: true})
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/user', clientRouter);
+app.use('/users', clientRouter);
 app.use('/payment', paymentRouter);
 app.use('/professional', professionalRouter);
-app.use('/tattoo', tattooRouter);
+app.use('/tattoos', tattooRouter);
 
 module.exports = app;
