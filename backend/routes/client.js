@@ -5,6 +5,7 @@ const Client = require("../models/client");
 const router = Router();
 
 const auth = require("../middleware/auth").auth;
+const passport = require("passport");
 
 router.get('/', auth, async (req, res) => {
     let clients = await Client.find({});
@@ -30,7 +31,7 @@ router.post('/', (req, res, next) => {
         if(err){
             res.statusCode = 500;
             res.setHeader('Content-Type', 'application/json');
-            res.json({err: err})
+            res.json({err})
         }else if(client){
             passport.authenticate('local')(req, res, () => {
                 res.statusCode = 200;
