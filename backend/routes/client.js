@@ -23,15 +23,29 @@ router.get('/:id', auth ,async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
-    let { name, username, email, password } = req.body;
-    try {
-        let user = new Client({name, username, email, password});
-        await user.save();
-        return res.status(200).json(user);
-    } catch(err) {
-        return res.status(406).json({"message": err.message});
-    }
+router.post('/', async (req, res, next) => {
+    // let { name, username, email, password } = req.body;
+    // try {
+    //     let user = new Client({name, username, email, password});
+    //     await user.save();
+    //     return res.status(200).json(user);
+    // } catch(err) {
+    //     return res.status(406).json({"message": err.message});
+    // }
+
+    Client.register(new User({username: req.body.username}), req.body.password, (err,client) => {
+        if(err){
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.json({err})
+        }else{
+            passport.authenticate('local')(req, res, () => {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'application/json');
+                res.json({sucess: true, status: "Cadastro foi um sucesso"});
+            })
+        }
+    })
 
 });
 
