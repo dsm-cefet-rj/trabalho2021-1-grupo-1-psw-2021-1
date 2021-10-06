@@ -4,14 +4,14 @@ const Client = require("../models/client");
 
 const router = Router();
 
-const auth = require("../middleware/auth.js")
+const auth = require("../middleware/auth").auth;
 
 router.get('/', auth, async (req, res) => {
     let clients = await Client.find({});
     return res.status(200).json(clients);
 });
 
-router.get('/:id', auth ,async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
     let { id: _id } = req.params;
 
     let user = await Client.find({_id});
@@ -33,7 +33,7 @@ router.post('/', async (req, res, next) => {
     //     return res.status(406).json({"message": err.message});
     // }
 
-    Client.register(new User({username: req.body.username}), req.body.password, (err,client) => {
+    Client.register(new Client({username: req.body.username}), req.body.password, (err,client) => {
         if(err){
             res.statusCode = 500;
             res.setHeader('Content-Type', 'application/json');

@@ -4,7 +4,7 @@ const Payment = require("../models/payment");
 
 const router = Router();
 
-const auth = require("../middleware/auth");
+const auth = require("../middleware/auth").auth;
 
 router.get('/', auth, async (req, res) => {
     try{

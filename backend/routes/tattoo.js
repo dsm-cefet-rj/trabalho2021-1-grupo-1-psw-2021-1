@@ -6,12 +6,12 @@ const router = Router();
 
 const auth = require("../middleware/auth");
 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
     let tattoos = await Tattoo.find({})
     return res.status(200).json(tattoos);
 });
 
-router.get('/:id', auth, async (req, res) => {
+router.get('/:id', async (req, res) => {
     let { id: _id } = req.params;
 
     let tattoo = await Tattoo.find({_id});
@@ -23,7 +23,7 @@ router.get('/:id', auth, async (req, res) => {
     }
 });
 
-router.post('/', auth, async (req, res) => {
+router.post('/', async (req, res) => {
     let { tags, preco, name, description, image, user_id } = req.body;
     try{
         let tattoo = Tattoo({tags, preco, name, description, image, user_id});
@@ -34,7 +34,7 @@ router.post('/', auth, async (req, res) => {
     }
 });
 
-router.patch('/:id', auth, async (req, res) => {
+router.patch('/:id', async (req, res) => {
     let { id:_id } = req.params;
     let { tags, preco, name, description, image, user_id } = req.body;
     try {
@@ -45,7 +45,7 @@ router.patch('/:id', auth, async (req, res) => {
     }
 });
 
-router.delete('/:id', auth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     let { id: _id } = req.params;
     try {
         await Tattoo.remove({_id})
