@@ -6,7 +6,7 @@ const router = Router();
 
 const auth = require("../middleware/auth").auth;
 
-router.get('/', auth, async (req, res) => {
+router.get('/', async (req, res) => {
     let clients = await Client.find({});
     return res.status(200).json(clients);
 });
@@ -33,18 +33,30 @@ router.post('/', async (req, res, next) => {
     //     return res.status(406).json({"message": err.message});
     // }
 
-    Client.register(new Client({username: req.body.username}), req.body.password, (err,client) => {
-        if(err){
-            res.statusCode = 500;
-            res.setHeader('Content-Type', 'application/json');
-            res.json({err})
-        }else{
+    Client.register(new Client({username: req.body.username}), req.body.password, (err, client) => {
+        
+        console.log(client)
+        try{
             passport.authenticate('local')(req, res, () => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
                 res.json({sucess: true, status: "Cadastro foi um sucesso"});
             })
+        } catch (err) {
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.json({err: err})
         }
+
+        // if(err){
+   
+        // }else if(client){
+        //     passport.authenticate('local')(req, res, () => {
+        //         res.statusCode = 200;
+        //         res.setHeader('Content-Type', 'application/json');
+        //         res.json({sucess: true, status: "Cadastro foi um sucesso"});
+        //     })
+        // }
     })
 
 });
