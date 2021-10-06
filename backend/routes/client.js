@@ -5,6 +5,7 @@ const Client = require("../models/client");
 const router = Router();
 
 const auth = require("../middleware/auth").auth;
+const getToken = require("../middleware/auth");
 const passport = require("passport");
 
 router.get('/', auth, async (req, res) => {
@@ -23,6 +24,13 @@ router.get('/:id', auth, async (req, res) => {
         return res.status(406).json({ message: 'usuário não encontrado' });
     }
 });
+
+router.post('/login', passport.authenticate('local'), (req, res) => {
+    const token = getToken.getToken({_id: req.client._id});
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.json({sucess: true, token: token, status: "logado"});
+})
 
 router.post('/', (req, res, next) => {
 
