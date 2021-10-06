@@ -4,7 +4,9 @@ const Payment = require("../models/payment");
 
 const router = Router();
 
-router.get('/', async (req, res) => {
+const auth = require("../middleware/auth");
+
+router.get('/', auth, async (req, res) => {
     try{
         let payments = await Payment.find({});
         return res.status(200).json(payments);
@@ -13,10 +15,8 @@ router.get('/', async (req, res) => {
     }
 
 });
-
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
     let { id: _id } = req.params;
-     
     try{
         let payment = await Payment.find({_id});
         return res.status(200).json(payment);
@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     let { value, name, cpf, num_cartao, validade, preco, cvv, id_compra } = req.body;
 
     try{
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     let { id: _id } = req.params;
     
     try{

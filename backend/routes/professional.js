@@ -4,12 +4,14 @@ const Professional = require("../models/professional");
 
 const router = Router();
 
-router.get('/', async (req, res) => {
+const auth = require("../middleware/auth");
+
+router.get('/', auth, async (req, res) => {
     let professional = await Professional.find({});
     return res.status(200).json(professional);
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', auth, async (req, res) => {
     let { id: _id } = req.params;
 
     let user = await Professional.find({_id});
@@ -33,7 +35,7 @@ router.post('/', async (req, res) => {
 
 });
 
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', auth, async (req, res) => {
     let { id: _id } = req.params;
     let { name, username, email, password } = req.body;
 
@@ -47,7 +49,7 @@ router.patch('/:id', async (req, res) => {
     }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     let { id: _id } = req.params;
     try {
         await Professional.remove({_id})
