@@ -47,10 +47,17 @@ export default function SignUpClient() {
     async function onSubmit(event) {
         event.preventDefault();
         const valid_bool = await userSchema.isValid(user)
+        let res = {}
         if (valid_bool) {
-            await api.post(`/users/`, user);
-            alert("Usuário cadastrado com sucesso")
-            history.push("/login/")
+            res = await api.post(`/users/`, user);
+            if (res.status == 200)
+            {
+                alert("Usuário cadastrado com sucesso")
+                history.push("/login/")
+            }
+            else{
+                alert("Não foi possivel cadastrar usuário")
+            }
         }
         else {
             userSchema.validate(user, {abortEarly: false }).catch(function (err) {

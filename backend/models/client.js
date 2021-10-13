@@ -27,9 +27,10 @@ const clientSchema = new Schema({
     },
     updated_at: {
         type: Date, 
-        default: Date.now(), 
+        default: Date.now(),  
         require: true,
     }
+
 });
 
 clientSchema.plugin(passportLocalMongoose);

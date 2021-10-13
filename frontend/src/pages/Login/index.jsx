@@ -1,7 +1,7 @@
 import '../../styles/Login.css';
 import {useState} from 'react';
 import { Link, useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 import { api } from '../../services/api';
 
 import { loginSchema } from "../../schemas/loginSchema.js";
@@ -22,10 +22,23 @@ export default function Login() {
     async function onSubmit(event) {
         event.preventDefault();
         let find = false
+        let res = {}
         const valid_bool = await loginSchema.isValid(user)
         if(valid_bool)
         {
-            history.push("/me/")
+            res = await api.post('users/login',{
+                email: user.email, 
+                password: user.senha
+            });
+            console.log(res)
+            if (res.status == 200)
+            {
+                axios.defaults.headers.common["Authorization"] = res.data.token
+                history.push("/me")   
+            }
+            else{
+                setError({})
+            }
         }
         else
         {

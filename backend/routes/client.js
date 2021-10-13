@@ -4,8 +4,8 @@ const Client = require("../models/client");
 
 const router = Router();
 
-const auth = require("../middleware/auth").auth;
-const getToken = require("../middleware/auth");
+const { auth } = require("../middleware/auth");
+const { generateToken } = require("../middleware/auth");
 const passport = require("passport");
 
 router.get('/', auth, async (req, res) => {
@@ -14,6 +14,7 @@ router.get('/', auth, async (req, res) => {
 });
 
 router.get('/:id', auth, async (req, res) => {
+    console.log(req.headers)
     let { id: _id } = req.params;
 
     let user = await Client.find({_id});
@@ -25,30 +26,38 @@ router.get('/:id', auth, async (req, res) => {
     }
 });
 
-router.post('/login', passport.authenticate('local'), (req, res) => {
-    const token = getToken.getToken({_id: req.client._id});
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.json({sucess: true, token: token, status: "logado"});
+router.post('/login', async (req, res) => {
+
+    let {email, password} = req.body;
+
+    try{
+        let {_id} = await Client.findOne({email, password});
+        const token = generateToken(_id);
+        return res
+            .status(200)
+            .header("auth", token)
+            .json({sucess: true, token: token});
+            
+        } catch(error) {
+            return res
+                .status(401)
+                .json({"message": error.message});
+    }
 })
 
-router.post('/', (req, res, next) => {
-
-    Client.register(new Client({username: req.body.username}), req.body.password, (err, client) => {
-
-        if(err){
-            res.statusCode = 500;
-            res.setHeader('Content-Type', 'application/json');
-            res.json({err})
-        }else if(client){
-            passport.authenticate('local')(req, res, () => {
-                res.statusCode = 200;
-                res.setHeader('Content-Type', 'application/json');
-                res.json({sucess: true, status: "Cadastro foi um sucesso"});
-            })
-        }
-    })
-
+router.post('/', async (req, res) => {
+    let  {email, username, name, senha: password} = req.body;
+    try{
+        let user = new Client({email, username, name, password});
+        await user.save();
+        return res
+            .status(200)
+            .json({"message": "Usuário cadastrado"});
+    } catch(err) {
+        res
+            .status(401)
+            .json({"message": "Não foi possível cadastrar o usuário"});
+    } 
 });
 
 router.patch('/:id', auth, async (req, res) => {
@@ -73,6 +82,11 @@ router.delete('/:id', auth, async (req, res) => {
     } catch {
         return res.status(406).json({ message: 'usuário não deletado' });
     }
+});
+
+router.get('/getHeaders',async (req, res) => {
+    console.log(req.header)
+    return res.json(req.header)
 });
 
 module.exports = router;
