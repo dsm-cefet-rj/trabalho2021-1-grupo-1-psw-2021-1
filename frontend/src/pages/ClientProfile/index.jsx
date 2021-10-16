@@ -13,7 +13,7 @@ export default function ClientProfile() {
     
     useEffect( async () => {
         console.log(axios.defaults.headers)
-        req = {}  
+        req = {}
     }, []);
     return (
         <main id="container">

@@ -17,11 +17,10 @@ export default function Login() {
         senha: "",
     });
     
-    console.log(errors)
+    conso
 
     async function onSubmit(event) {
         event.preventDefault();
-        let find = false
         let res = {}
         const valid_bool = await loginSchema.isValid(user)
         if(valid_bool)

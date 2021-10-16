@@ -79,6 +79,10 @@
         padding: 1rem;
         transition: linear 0.7s;
     }
+
+    #profile-settings li {
+        transition: linear 0.5s;
+    }
     
     #profile-settings li:hover {
         cursor: pointer;

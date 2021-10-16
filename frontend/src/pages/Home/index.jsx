@@ -11,29 +11,6 @@ export default function Home() {
     let [tattoos, setTattoos] = useState([]);
     let [tatuadores, setTatuadores] = useState([])
 
-    useEffect(() => {
-        const cards = document.querySelectorAll(".cards");
-
-        Array.from(cards);
-        cards.forEach(card => {
-            card.addEventListener("mouseenter", (e) => {
-                card.lastChild.classList.add("art-info-animation");
-                card.lastChild.childNodes[2].style.fontSize = "initial";
-                card.lastChild.childNodes[2].style.fontWeight = "initial";
-                card.lastChild.childNodes[2].style.marginTop = "0";
-                card.lastChild.childNodes[2].style.backgroundColor = "transparent";
-            })
-
-            card.addEventListener("mouseleave", (e) => {
-                card.lastChild.classList.remove("art-info-animation");
-                card.lastChild.childNodes[2].style.backgroundColor = "rgba(255, 255, 255, 0.875)";
-                card.lastChild.childNodes[2].style.fontSize = "20px";
-                card.lastChild.childNodes[2].style.fontWeight = "bold";
-                card.lastChild.childNodes[2].style.marginTop = "150px";
-            })
-        })
-    })
-
     useEffect(async () => {
         const { data } = await api.get("/tattoos");
         setTattoos(data);
@@ -59,7 +36,9 @@ export default function Home() {
                     {
                         tattoos.map(tattoo => {
                             return (
-                                <Card  id={tattoo.id} name={tattoo.name} disc={tattoo.description} image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name }})} />
+                                <Link to={"/tattoo/" + tattoo._id}>
+                                    <Card  id={tattoo._id} name={tattoo.name} disc={tattoo.description} image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name }})} />
+                                </Link>
                             )
                         })
                     }

@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
 router.post('/', async (req, res) => {
     let  {email, username, name, senha: password} = req.body;
     try{
-        let user = new Client({email, username, name, password});
+        let user = new Client({email, username, name, password});k
         await user.save();
         return res
             .status(200)
