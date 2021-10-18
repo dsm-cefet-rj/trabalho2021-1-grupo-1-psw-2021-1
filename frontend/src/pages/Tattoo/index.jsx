@@ -12,9 +12,11 @@ export default function Tattoo(props) {
 
     console.log(tattoo);
 
+    // tirar o console.log e terminar a página das tatuagens mais tarde
     return(
         <div>
-            <h1>{tattoo._id}</h1>
+            <h3>{tattoo.description}</h3>
+
 
 
 
