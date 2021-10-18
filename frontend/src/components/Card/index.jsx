@@ -1,21 +1,8 @@
-import { connect, useDispatch } from "react-redux";
-
-import cartSlice from "../../store/cart";
-
 import { Link, useHistory } from 'react-router-dom';
 
 import "../../styles/Card.css";
 
 function Card(props) {
-
-    const history = useHistory()
-
-    const dispatch = useDispatch()
-
-    const buyTattoo = (props) => {
-        dispatch(cartSlice.actions.tattooAdd({id: props.id}))
-        console.log(props)
-    }
 
     return (
         <article className="cards">

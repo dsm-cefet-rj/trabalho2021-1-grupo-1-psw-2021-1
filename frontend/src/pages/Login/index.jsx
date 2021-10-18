@@ -16,8 +16,6 @@ export default function Login() {
         email: "",
         senha: "",
     });
-    
-    conso
 
     async function onSubmit(event) {
         event.preventDefault();
