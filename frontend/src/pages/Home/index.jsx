@@ -16,11 +16,6 @@ export default function Home() {
         setTattoos(data);
     }, []);
 
-    useEffect(async () => {
-        const { data } = await api.get("/users")
-        setTatuadores(data)
-    }, []);
-
     return (
         <div>
             <header>

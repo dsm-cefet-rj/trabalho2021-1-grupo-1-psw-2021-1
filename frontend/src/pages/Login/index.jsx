@@ -85,6 +85,7 @@ export default function Login() {
                     <button type="submit" id="login-button" onClick={onSubmit}><Link href="/me">Entrar</Link></button>
                 </form>
 
+                <a id="signup-link" href="/signup">Não possui conta? Cadastre-se!</a>
                 <a id="forgot-password" href="#">Esqueceu sua senha?</a>
             </div>
             <div id="image-login-container">

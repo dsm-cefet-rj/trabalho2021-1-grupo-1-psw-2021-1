@@ -50,20 +50,6 @@
     margin-top: 5vh;
 }
 
-@media screen and (min-width: 1600px){
-
-    #login-container{
-        display: flex;
-    }
-    
-    #image-login-container{
-        display: block;
-        width: 80%;
-    }
-
-    #image-login{
-        height: 100%;
-        width:100%;
-    }
-    
+#signup-link{
+    margin-top: 5px;
 }
