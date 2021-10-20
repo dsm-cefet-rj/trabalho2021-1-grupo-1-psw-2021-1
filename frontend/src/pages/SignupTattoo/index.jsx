@@ -61,6 +61,7 @@ export default function SignUpTattoo() {
     async function onSubmit(event) {
         event.preventDefault();
         const valid_bool = await tattooSchema.isValid(tattoo)
+        console.log(tattoo)
         if(valid_bool)
         {
             api.post(`/tattoos/`, tattoo);

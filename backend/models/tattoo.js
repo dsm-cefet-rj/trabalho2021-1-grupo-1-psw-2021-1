@@ -17,6 +17,18 @@ const tattooSchema = new Schema({
         type: Number,
         require: true
     },
+    name: {
+        type: String,
+        require: true
+    },
+    user_id: {
+        type: String,
+        require: true
+    },
+    url: {
+        type: String,
+        require: true
+    },
     created_at: {
         type: Date,
         default: Date.now(),

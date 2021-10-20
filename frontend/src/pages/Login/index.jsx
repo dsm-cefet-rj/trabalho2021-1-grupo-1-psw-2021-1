@@ -30,7 +30,7 @@ export default function Login() {
             console.log(res)
             if (res.status == 200)
             {
-                axios.defaults.headers.common["Authorization"] = res.data.token
+                localStorage.setItem("token", res.data.token)
                 history.push("/me")   
             }
             else{

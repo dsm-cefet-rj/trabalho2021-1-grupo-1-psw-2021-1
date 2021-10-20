@@ -14,7 +14,6 @@ router.get('/', auth, async (req, res) => {
 });
 
 router.get('/:id', auth, async (req, res) => {
-    console.log(req.headers)
     let { id: _id } = req.params;
 
     let user = await Client.find({_id});

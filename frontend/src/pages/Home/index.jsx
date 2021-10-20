@@ -7,12 +7,14 @@ import { api } from "../../services/api";
 import "../../styles/Home.css"
 
 export default function Home() {
-
+    
+    let token = "Bearer "+ localStorage.getItem("token")
+    console.log(token)
     let [tattoos, setTattoos] = useState([]);
     let [tatuadores, setTatuadores] = useState([])
-
+    
     useEffect(async () => {
-        const { data } = await api.get("/tattoos");
+        const { data } = await api.get("/tattoos",{headers: {"Authorization": token}});
         setTattoos(data);
     }, []);
 
@@ -31,9 +33,7 @@ export default function Home() {
                     {
                         tattoos.map(tattoo => {
                             return (
-                                <Link to={"/tattoo/" + tattoo._id}>
-                                    <Card  id={tattoo._id} name={tattoo.name} disc={tattoo.description} image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name }})} />
-                                </Link>
+                                <Card  id={tattoo._id} name={tattoo.name} disc={tattoo.description} image={tattoo.image} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name }})} />
                             )
                         })
                     }

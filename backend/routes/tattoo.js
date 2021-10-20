@@ -24,9 +24,11 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    let { tags, preco, name, description, image, user_id } = req.body;
+    
+    let { tags, preco, name, description, image, user_id, url } = req.body;
     try{
-        let tattoo = Tattoo({tags, preco, name, description, image, user_id});
+        let tattoo = Tattoo({tags, preco, name, description, image, user_id, url});
+        console.log(tattoo)
         await tattoo.save();
         return res.status(200).json(tattoo);
     } catch(err) {

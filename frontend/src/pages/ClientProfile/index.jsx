@@ -1,7 +1,7 @@
 import Card from '../../components/Card';
-
-import { useEffect } from 'react';
-
+import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import jwt from 'jsonwebtoken';
 import "../../styles/ClientProfile.css";
 import { api } from "../../services/api.js";
 import axios from 'axios';
@@ -9,11 +9,27 @@ import axios from 'axios';
 
 
 export default function ClientProfile() {
-    let req = [];
-    
+    let [tattoos, setTattoos] = useState([]);
+    let [user, setUser] = useState([]);
+    let [tatuadores, setTatuadores] = useState([])
+
+    console.log(user)
+    console.log(tattoos)
+    let token = "Bearer "+ localStorage.getItem("token")
+    let id = jwt.decode(localStorage.getItem("token")).id
+    console.log(id)
     useEffect( async () => {
-        console.log(axios.defaults.headers)
-        req = {}
+        
+        const { data } = await api.get("/tattoos/?_id="+id,{headers: {"auth": token,"Access-Control-Allow-Origin":"*"}});
+        setTattoos(data);
+    }, []);
+    useState( async () => {
+        const { data } = await api.get("/users/"+id,{headers: {"auth": token}});
+        setUser(data[0]);
+    }, []);
+    useState(async () => {
+        const { data } = await api.get("/users",{headers: {"Authorization": token}});
+        setTatuadores(data);
     }, []);
     return (
         <main id="container">
@@ -22,9 +38,9 @@ export default function ClientProfile() {
                     <div id="img-container">
                         <img src={"/assets/images/img-profile.jpg"} alt="Imagem de perfil do tatuador" />
                     </div>
-                    <h2 id="username">{req}</h2>
+                    <h2 id="username">{user.username}</h2>
                     <button type="button" id="settings">
-                        <img id="edit-icon" src={"/assets/images/edit.svg"} alt="Editar pergil" />
+                        <Link to={"/profile/"+ id + "/newTattoo"}><img id="edit-icon" src={"/assets/images/edit.svg"} alt="Editar perfil" /></Link>
                     </button>
                     <p> Minus consequuntur natus quo, dignissimos laboriosam veniam inventore recusandae, distinctio est tempore facere.</p>
                 </section>
@@ -45,10 +61,13 @@ export default function ClientProfile() {
                     <button>Minhas tattos</button>
                     <button>Tatuadores</button>
                 </div>
-                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
-                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
-                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
-                <Card image="/assets/images/tattoo exemplo.jpg" preco="100,00" />
+                {
+                        tattoos.map(tattoo => {
+                            return (
+                                <Card  id={tattoo._id} name={tattoo.name} disc={tattoo.description} image={"/assets/images/tattoo exemplo.jpg"} preco={tattoo.preco} link={"profile/" + tattoo.user_id} login={tatuadores.map(tatuador => { if (tatuador.id == tattoo.user_id) { return tatuador.name }})} />
+                            )
+                        })
+                }
             </section>
         </main>
 

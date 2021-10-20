@@ -9,13 +9,14 @@ function Card(props) {
             <img src={props.image} alt="Imagem da tatuagem" />
             <div className="art-info">
                 <h6>{props.name}, {props.disc}</h6>
-                <a href={props.link}>
+                <a id="username_tattoo" href={props.link}>
                     Feita por: @{props.login}
                 </a> 
                 <p>{`R$ ${props.preco.toString()}`}</p>
                 <button className="btn-salvar">Salvar</button>
                 <button className="btn-comprar" ><Link to={"/" + props.id + "/payment"}>Comprar</Link></button>
             </div>
+            
         </article>
     )
 }
